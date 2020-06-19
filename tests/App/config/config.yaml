@@ -5,7 +5,17 @@ framework:
         storage_id: session.storage.mock_file
         handler_id: session.handler.native_file
 
+bazinga_geocoder:
+  providers:
+    chain:
+        factory: Bazinga\GeocoderBundle\ProviderFactory\ChainFactory
+        options:
+            services: []
+
 twig:
+    paths:
+        - '%kernel.project_dir%/templates'
+
     strict_variables: true
     exception_controller: null
 
@@ -14,6 +24,6 @@ services:
         autowire: true
         autoconfigure: true
 
-    Nucleos\MapsBundle\Tests\App\Controller\TestController:
+    Nucleos\MapsBundle\Tests\App\Controller\BlockRenderController:
         tags:
             - controller.service_arguments

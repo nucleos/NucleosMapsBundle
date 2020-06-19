@@ -13,7 +13,7 @@ use Nucleos\MapsBundle\DependencyInjection\NucleosMapsExtension;
 use Nucleos\MapsBundle\NucleosMapsBundle;
 use PHPUnit\Framework\TestCase;
 
-class NucleosMapsBundleTest extends TestCase
+final class NucleosMapsBundleTest extends TestCase
 {
     public function testGetContainerExtension(): void
     {
