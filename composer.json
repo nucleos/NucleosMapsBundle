@@ -89,9 +89,25 @@
             "find ./src \\( -name '*.xml' -or -name '*.xml.dist' -or -name '*.xlf' \\) -type f -exec xmllint --encode UTF-8 --output '{}' --format '{}' \\;",
             "find ./src \\( -name '*.yml' -or -name '*.yaml' \\) -not -path '*/vendor/*' | xargs yaml-lint"
         ],
-        "unused": "vendor/bin/composer-unused",
         "phpstan": "vendor/bin/phpstan analyse",
-        "phpstan-baseline": "vendor/bin/phpstan analyze --generate-baseline",
         "test": "vendor/bin/phpunit --colors=always"
-    }
+    },
+    "funding": [
+        {
+            "type": "github",
+            "url": "https://github.com/sponsors/core23"
+        },
+        {
+            "type": "opencollective",
+            "url": "https://opencollective.com/core23"
+        },
+        {
+            "type": "ko-fi",
+            "url": "https://ko-fi.com/core23"
+        },
+        {
+            "type": "other",
+            "url": "https://donate.core23.de"
+        }
+    ]
 }
