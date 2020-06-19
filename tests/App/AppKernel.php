@@ -11,8 +11,10 @@ declare(strict_types=1);
 
 namespace Nucleos\MapsBundle\Tests\App;
 
+use Bazinga\GeocoderBundle\BazingaGeocoderBundle;
 use Nucleos\MapsBundle\NucleosMapsBundle;
-use Nucleos\MapsBundle\Tests\App\Controller\TestController;
+use Nucleos\MapsBundle\Tests\App\Controller\BlockRenderController;
+use Sonata\BlockBundle\SonataBlockBundle;
 use Symfony\Bundle\FrameworkBundle\FrameworkBundle;
 use Symfony\Bundle\FrameworkBundle\Kernel\MicroKernelTrait;
 use Symfony\Bundle\TwigBundle\TwigBundle;
@@ -41,6 +43,8 @@ final class AppKernel extends Kernel
     {
         yield new FrameworkBundle();
         yield new TwigBundle();
+        yield new SonataBlockBundle();
+        yield new BazingaGeocoderBundle();
         yield new NucleosMapsBundle();
     }
 
@@ -61,7 +65,7 @@ final class AppKernel extends Kernel
 
     protected function configureRoutes(RouteCollectionBuilder $routes): void
     {
-        $routes->add('/test', TestController::class);
+        $routes->add('/test', BlockRenderController::class);
     }
 
     protected function configureContainer(ContainerBuilder $containerBuilder, LoaderInterface $loader): void

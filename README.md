@@ -1,5 +1,5 @@
-MapsBundle
-==============
+NucleosMapsBundle
+=================
 [![Latest Stable Version](https://poser.pugx.org/nucleos/maps-bundle/v/stable)](https://packagist.org/packages/nucleos/maps-bundle)
 [![Latest Unstable Version](https://poser.pugx.org/nucleos/maps-bundle/v/unstable)](https://packagist.org/packages/nucleos/maps-bundle)
 [![License](https://poser.pugx.org/nucleos/maps-bundle/license)](LICENSE.md)
@@ -34,10 +34,25 @@ return [
 ];
 ```
 
-### Assets
+### Configure the Bundle
 
-It is recommended to use [webpack](https://webpack.js.org/) / [webpack-encore](https://github.com/symfony/webpack-encore)
-to include the `widget.js` file in your page. These file is located in the `assets` folder.
+Create a configuration file called `bazinga_geocoder.yaml` and define geocoders:
+
+```yaml
+# config/packages/bazinga_geocoder.yaml
+
+bazinga_geocoder:
+  providers:
+    nominatim_provider:
+        factory: Bazinga\GeocoderBundle\ProviderFactory\NominatimFactory
+        cache: 'app.map_cache'
+        cache_lifetime: 3600
+        cache_precision: 4
+    chain:
+        factory: Bazinga\GeocoderBundle\ProviderFactory\ChainFactory
+        options:
+            services: ['@bazinga_geocoder.provider.nominatim_provider']
+```
 
 ## Usage
 
@@ -49,6 +64,11 @@ to include the `widget.js` file in your page. These file is located in the `asse
     'service': 'openstreetmap'
 }) }}
 ```
+
+### Assets
+
+It is recommended to use [webpack](https://webpack.js.org/) / [webpack-encore](https://github.com/symfony/webpack-encore)
+to include the `widget.js` file in your page. These file is located in the `assets` folder.
 
 ## License
 

@@ -11,12 +11,13 @@ declare(strict_types=1);
 
 namespace Nucleos\MapsBundle\Tests\App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 
-final class TestController
+final class BlockRenderController extends AbstractController
 {
     public function __invoke(): Response
     {
-        return new Response();
+        return $this->render('demo.html.twig');
     }
 }
