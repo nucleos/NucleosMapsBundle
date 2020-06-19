@@ -1,0 +1,12 @@
+{
+  "entrypoints": {
+    "widget": {
+      "css": [
+        "/bundles/nucleosmaps/widget.css"
+      ],
+      "js": [
+        "/bundles/nucleosmaps/widget.js"
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+    "require": {
+        "matthiasnoback/symfony-dependency-injection-test": "^4.0",
+        "phpunit/phpunit": "^9.0",
+        "symfony/phpunit-bridge": "^5.0"
+    }
+}

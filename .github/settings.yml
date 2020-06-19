@@ -1,0 +1,32 @@
+# These settings are synced to GitHub by https://probot.github.io/apps/settings/
+
+_extends: .github
+
+repository:
+  name: NucleosMapsBundle
+  description: This bundle provides simple map rendering in symfony application.
+  homepage: https://nucleos.rocks
+  topics: symfony, symfony-bundle, bundle, php, maps, google maps, openstreetmap, sonata, sonata-block
+
+branches:
+  - name: main
+    protection:
+      enforce_admins: false
+      required_status_checks:
+        contexts:
+          - "Coding Standards (7.4)"
+          - "Static Code Analysis (7.4)"
+          - "Tests (7.3, lowest, ~4.2)"
+          - "Tests (7.3, lowest, ~5.0)"
+          - "Tests (7.3, highest, ~4.2)"
+          - "Tests (7.3, highest, ~5.0)"
+          - "Tests (7.4, lowest, ~4.2)"
+          - "Tests (7.4, lowest, ~5.0)"
+          - "Tests (7.4, highest, ~4.2)"
+          - "Tests (7.4, highest, ~5.0)"
+          - "Code Coverage (7.4)"
+          - "Mutation Tests (7.4)"
+        strict: true
+
+      required_pull_request_reviews: null
+      restrictions: null

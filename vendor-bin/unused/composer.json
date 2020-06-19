@@ -1,0 +1,5 @@
+{
+    "require": {
+        "icanhazstring/composer-unused": "^0.7"
+    }
+}

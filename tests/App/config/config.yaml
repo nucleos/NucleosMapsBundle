@@ -1,0 +1,19 @@
+framework:
+    secret: secret
+
+    session:
+        storage_id: session.storage.mock_file
+        handler_id: session.handler.native_file
+
+twig:
+    strict_variables: true
+    exception_controller: null
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    Nucleos\MapsBundle\Tests\App\Controller\TestController:
+        tags:
+            - controller.service_arguments

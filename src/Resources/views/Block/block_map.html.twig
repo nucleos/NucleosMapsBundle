@@ -1,0 +1,53 @@
+{% extends sonata_block.templates.block_base %}
+
+{% block block %}
+    <div class="panel panel-default {{ settings.class }}">
+        {% if settings.title is not empty %}
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    {% if settings.icon %}
+                        <i class="{{ settings.icon }}" aria-hidden="true"></i>
+                    {% endif %}
+                    {% if settings.translation_domain %}
+                        {{ settings.title|trans({}, settings.translation_domain) }}
+                    {% else %}
+                        {{ settings.title }}
+                    {% endif %}
+                </h4>
+            </div>
+        {% endif %}
+
+        <div class="panel-body">
+            {{ block('map_wrapper') }}
+        </div>
+    </div>
+{% endblock %}
+
+{% block map_wrapper %}
+    {% if settings.service == 'googlemaps' %}
+        {{ block('googlemaps') }}
+    {% elseif settings.service == 'openstreetmap' %}
+        {{ block('openstreetmap') }}
+    {% endif %}
+{% endblock %}
+
+{% block googlemaps %}
+    <div id="map-{{ random() }}" style="height: {{ settings.height }}px"
+         data-googlemaps="{{ {
+             title: settings.marker_title,
+             address: settings.address|replace({'\r\n': ", "}),
+             center: { longitude: coordinates[0], latitude: coordinates[1] },
+             apiKey: app.request.server.get('GOOGLE_API_KEY', ''),
+         }|json_encode|e('html_attr') }}"
+    ></div>
+{% endblock %}
+
+{% block openstreetmap %}
+    <div id="map-{{ random() }}" style="height: {{ settings.height }}px"
+         data-openstreetmap="{{ {
+             title: settings.marker_title,
+             address: settings.address|replace({'\r\n': ", "}),
+             center: { longitude: coordinates[0], latitude: coordinates[1] },
+         }|json_encode|e('html_attr') }}"
+    ></div>
+{% endblock %}

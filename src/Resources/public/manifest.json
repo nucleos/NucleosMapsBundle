@@ -1,0 +1,11 @@
+{
+  "widget.css": "/bundles/nucleosmaps/widget.css",
+  "widget.js": "/bundles/nucleosmaps/widget.js",
+  "images/layers-2x.png": "/bundles/nucleosmaps/images/layers-2x.4f0283c6.png",
+  "images/layers.png": "/bundles/nucleosmaps/images/layers.a6137456.png",
+  "images/marker-icon.png": "/bundles/nucleosmaps/images/marker-icon.2273e3d8.png",
+  "images/markers_default.png": "/bundles/nucleosmaps/images/markers_default.7211dd94.png",
+  "images/markers_default@2x.png": "/bundles/nucleosmaps/images/markers_default@2x.0e04541b.png",
+  "images/markers_shadow.png": "/bundles/nucleosmaps/images/markers_shadow.9e9c77db.png",
+  "images/markers_shadow@2x.png": "/bundles/nucleosmaps/images/markers_shadow@2x.d3a5d64a.png"
+}

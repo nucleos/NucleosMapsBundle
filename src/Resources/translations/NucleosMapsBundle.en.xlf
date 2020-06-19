@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="nucleos_maps.block.map">
+        <source>nucleos_maps.block.map</source>
+        <target>Maps</target>
+      </trans-unit>
+      <trans-unit id="form.label_address">
+        <source>form.label_address</source>
+        <target>Address</target>
+      </trans-unit>
+      <trans-unit id="form.label_class">
+        <source>form.label_class</source>
+        <target>CSS Class</target>
+      </trans-unit>
+      <trans-unit id="form.label_height">
+        <source>form.label_height</source>
+        <target>Height</target>
+      </trans-unit>
+      <trans-unit id="form.label_icon">
+        <source>form.label_icon</source>
+        <target>Icon</target>
+      </trans-unit>
+      <trans-unit id="form.label_title">
+        <source>form.label_title</source>
+        <target>Title</target>
+      </trans-unit>
+      <trans-unit id="form.label_marker_title">
+        <source>form.label_marker_title</source>
+        <target>Marker title</target>
+      </trans-unit>
+      <trans-unit id="form.label_longitude">
+        <source>form.label_longitude</source>
+        <target>Longitude</target>
+      </trans-unit>
+      <trans-unit id="form.label_latitude">
+        <source>form.label_latitude</source>
+        <target>Latitude</target>
+      </trans-unit>
+      <trans-unit id="form.label_translation_domain">
+        <source>form.label_translation_domain</source>
+        <target>Translation domain</target>
+      </trans-unit>
+      <trans-unit id="form.label_api_key">
+        <source>form.label_api_key</source>
+        <target>API Key</target>
+      </trans-unit>
+      <trans-unit id="form.label_service">
+        <source>form.label_service</source>
+        <target>Service</target>
+      </trans-unit>
+      <trans-unit id="service.googlemaps">
+        <source>service.googlemaps</source>
+        <target>Google Maps</target>
+      </trans-unit>
+      <trans-unit id="service.openstreetmap">
+        <source>service.openstreetmap</source>
+        <target>OpenStreetMap</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

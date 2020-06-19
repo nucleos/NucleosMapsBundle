@@ -1,0 +1,97 @@
+{
+    "name": "nucleos/maps-bundle",
+    "type": "symfony-bundle",
+    "description": "This bundle provides simple map rendering in symfony application.",
+    "keywords": [
+        "symfony",
+        "maps",
+        "google maps",
+        "openstreetmap",
+        "sonata",
+        "sonata-block",
+        "block",
+        "widget",
+        "bundle"
+    ],
+    "homepage": "https://nucleos.rocks",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christian Gripp",
+            "email": "mail@core23.de"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "geocoder-php/chain-provider": "^4.0",
+        "geocoder-php/common-http": "^4.2",
+        "geocoder-php/provider-implementation": "^1.0",
+        "psr/log": "^1.0",
+        "sonata-project/block-bundle": "^3.18 || ^4.0",
+        "sonata-project/form-extensions": "^0.1 || ^1.4",
+        "symfony/config": "^4.4 || ^5.0",
+        "symfony/dependency-injection": "^4.4 || ^5.0",
+        "symfony/expression-language": "^4.4 || ^5.0",
+        "symfony/form": "^4.4 || ^5.0",
+        "symfony/framework-bundle": "^4.4 || ^5.0",
+        "symfony/http-foundation": "^4.4 || ^5.0",
+        "symfony/http-kernel": "^4.4 || ^5.0",
+        "symfony/options-resolver": "^4.4 || ^5.0",
+        "symfony/twig-bridge": "^4.4 || ^5.0",
+        "twig/twig": "^2.4 || ^3.0",
+        "willdurand/geocoder": "^4.2",
+        "willdurand/geocoder-bundle": "^5.3"
+    },
+    "require-dev": {
+        "bamarni/composer-bin-plugin": "^1.2",
+        "ergebnis/composer-normalize": "^2.0.1",
+        "geocoder-php/google-maps-provider": "^4.3",
+        "geocoder-php/nominatim-provider": "^5.0",
+        "nyholm/psr7": "^1.0",
+        "php-http/mock-client": "^1.3",
+        "symfony/browser-kit": "^4.4 || ^5.0"
+    },
+    "suggest": {
+        "geocoder-php/bing-maps-provider": "For bing geocoder",
+        "geocoder-php/google-maps-provider": "For Google Maps geocoder",
+        "geocoder-php/nominatim-provider": "For OpenStreetMap geocoder"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "1.x-dev"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Nucleos\\MapsBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Nucleos\\MapsBundle\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "@composer bin all install --ansi"
+        ],
+        "post-update-cmd": [
+            "@composer bin all update --ansi"
+        ],
+        "coverage": "vendor/bin/phpunit --colors=always --coverage-clover=build/logs/clover.xml",
+        "cs": "PHP_CS_FIXER_IGNORE_ENV=1 && vendor/bin/php-cs-fixer fix --verbose",
+        "cs-diff": "PHP_CS_FIXER_IGNORE_ENV=1 && vendor/bin/php-cs-fixer fix  --verbose --diff --diff-format=udiff --dry-run",
+        "deps": "vendor/bin/composer-require-checker check --config-file composer-require.json composer.json",
+        "lint": [
+            "find ./src \\( -name '*.xml' -or -name '*.xml.dist' -or -name '*.xlf' \\) -type f -exec xmllint --encode UTF-8 --output '{}' --format '{}' \\;",
+            "find ./src \\( -name '*.yml' -or -name '*.yaml' \\) -not -path '*/vendor/*' | xargs yaml-lint"
+        ],
+        "unused": "vendor/bin/composer-unused",
+        "phpstan": "vendor/bin/phpstan analyse",
+        "phpstan-baseline": "vendor/bin/phpstan analyze --generate-baseline",
+        "test": "vendor/bin/phpunit --colors=always"
+    }
+}
