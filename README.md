@@ -19,6 +19,8 @@ Open a command console, enter your project directory and execute the following c
 
 ```
 composer require nucleos/maps-bundle
+
+composer require geocoder-php/nominatim-provider # if you want OpenStreetMaps Geocoder
 ```
 
 ### Enable the Bundle
@@ -36,31 +38,45 @@ return [
 
 ### Configure the Bundle
 
-Create a configuration file called `bazinga_geocoder.yaml` and define geocoders:
+Create a configuration file called `nucleos_maps.yaml` and define geocoders:
 
 ```yaml
-# config/packages/bazinga_geocoder.yaml
+# config/packages/nucleos_maps.yaml
 
 bazinga_geocoder:
   providers:
-    nominatim_provider:
+    nominatim:
         factory: Bazinga\GeocoderBundle\ProviderFactory\NominatimFactory
-        cache: 'app.map_cache'
+        cache: 'cache.geocoder' # PSR16 Cache pool
         cache_lifetime: 3600
         cache_precision: 4
-    chain:
-        factory: Bazinga\GeocoderBundle\ProviderFactory\ChainFactory
-        options:
-            services: ['@bazinga_geocoder.provider.nominatim_provider']
+
+nucleos_maps:
+    geocoder:
+        services: 'bazinga_geocoder.provider.nominatim'
 ```
 
 ## Usage
+
+If you want dynamic address resultion:
 
 ```twig
 {# template.twig #}
 
 {{ sonata_block_render({ 'type': 'nucleos_maps.block.map' }, {
     'address': 'Hamburg',
+    'service': 'openstreetmap'
+}) }}
+```
+
+If you know the exact coordinates:
+
+```twig
+{# template.twig #}
+
+{{ sonata_block_render({ 'type': 'nucleos_maps.block.map' }, {
+    'longitude': '9.993682',
+    'latitude': '53.551086',
     'service': 'openstreetmap'
 }) }}
 ```

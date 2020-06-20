@@ -23,7 +23,14 @@ final class NucleosMapsExtension extends Extension
      */
     public function load(array $configs, ContainerBuilder $container): void
     {
+        $configuration = new Configuration();
+        $config        = $this->processConfiguration($configuration, $configs);
+
         $loader = new Loader\XmlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('block.xml');
+
+        $container->setAlias('nucleos_maps.geocoder', $config['geocoder']['service'])
+            ->setPublic(true)
+        ;
     }
 }
