@@ -137,7 +137,7 @@ jobs:
           - highest
 
         symfony:
-          - ~4.2
+          - ~4.4
           - ~5.0
 
     steps:
