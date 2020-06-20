@@ -5,12 +5,24 @@ framework:
         storage_id: session.storage.mock_file
         handler_id: session.handler.native_file
 
+    cache:
+      app: cache.adapter.filesystem
+      pools:
+        nucleos_maps.cache.pool:
+          adapter: cache.app
+          default_lifetime: 600
+
 bazinga_geocoder:
   providers:
-    chain:
-        factory: Bazinga\GeocoderBundle\ProviderFactory\ChainFactory
-        options:
-            services: []
+    nominatim:
+        factory: Bazinga\GeocoderBundle\ProviderFactory\NominatimFactory
+        cache: 'cache.geocoder'
+        cache_lifetime: 3600
+        cache_precision: 4
+
+nucleos_maps:
+    geocoder:
+        service: 'bazinga_geocoder.provider.nominatim'
 
 twig:
     paths:
@@ -27,3 +39,7 @@ services:
     Nucleos\MapsBundle\Tests\App\Controller\BlockRenderController:
         tags:
             - controller.service_arguments
+
+    cache.geocoder:
+      class: Symfony\Component\Cache\Psr16Cache
+      arguments: ['@nucleos_maps.cache.pool']

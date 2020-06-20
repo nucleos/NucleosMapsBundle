@@ -18,7 +18,11 @@ class NucleosMapsExtensionTest extends AbstractExtensionTestCase
     public function testLoadDefault(): void
     {
         $this->setParameter('kernel.bundles', []);
-        $this->load();
+        $this->load([
+            'geocoder' => [
+                'service' => 'some_service',
+            ],
+        ]);
 
         $this->assertContainerBuilderHasService('nucleos_maps.block.map', MapBlockService::class);
     }
