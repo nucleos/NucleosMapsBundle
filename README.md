@@ -53,7 +53,7 @@ bazinga_geocoder:
 
 nucleos_maps:
     geocoder:
-        services: 'bazinga_geocoder.provider.nominatim'
+        service: 'bazinga_geocoder.provider.nominatim'
 ```
 
 ## Usage
