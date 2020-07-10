@@ -24,7 +24,7 @@
         "sass-loader": "^9.0.0",
         "size-limit": "^4.5.2"
     },
-    "main": "assets/autoload.js",
+    "main": "assets/widget.js",
     "files": [
         "src/Resources/public/"
     ],
