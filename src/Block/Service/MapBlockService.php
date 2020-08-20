@@ -73,9 +73,9 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
         $this->configureEditForm($form, $block);
     }
 
-    public function configureEditForm(FormMapper $formMapper, BlockInterface $block): void
+    public function configureEditForm(FormMapper $form, BlockInterface $block): void
     {
-        $formMapper->add('settings', ImmutableArrayType::class, [
+        $form->add('settings', ImmutableArrayType::class, [
             'keys' => [
                 ['title', TextType::class, [
                     'required' => false,
@@ -92,7 +92,7 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
                         'googlemaps'    => 'googlemaps',
                         'openstreetmap' => 'openstreetmap',
                     ],
-                    'choice_label' => static function ($value, $key, $index): string {
+                    'choice_label' => static function (string $value, string $key, int $index): string {
                         return 'service.'.$key;
                     },
                 ]],
@@ -176,7 +176,7 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
 
         $address = $blockContext->getSetting('address');
 
-        if (null === $address) {
+        if (!\is_string($address)) {
             return null;
         }
 

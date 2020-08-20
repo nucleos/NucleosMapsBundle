@@ -89,6 +89,7 @@
             "find ./src \\( -name '*.yml' -or -name '*.yaml' \\) -not -path '*/vendor/*' | xargs yaml-lint"
         ],
         "phpstan": "vendor/bin/phpstan analyse",
+        "psalm": "vendor/bin/psalm",
         "test": "vendor/bin/phpunit --colors=always"
     },
     "funding": [
