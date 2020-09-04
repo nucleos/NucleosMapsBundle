@@ -4,7 +4,7 @@
     "homepage": "https://nucleos.rocks",
     "author": "Christian Gripp <mail@core23.de>",
     "dependencies": {
-        "leaflet": "^1.5.1",
+        "leaflet": "^1.7.1",
         "leaflet-extra-markers": "^1.1.0"
     },
     "devDependencies": {
