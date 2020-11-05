@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="3.11.6@7fc1f50f54bd6b174b1c43a37c1b0b151915d55c">
+<files psalm-version="3.18.2@19aa905f7c3c7350569999a93c40ae91ae4e1626">
   <file src="src/Block/Service/MapBlockService.php">
-    <MixedAssignment occurrences="3">
-      <code>$longitude</code>
+    <MixedAssignment occurrences="2">
       <code>$latitude</code>
-      <code>$address</code>
+      <code>$longitude</code>
     </MixedAssignment>
     <MixedReturnTypeCoercion occurrences="2">
       <code>$geo-&gt;getCoordinates()-&gt;toArray()</code>
-      <code>float[]|null</code>
+      <code>array{float, float}|null</code>
     </MixedReturnTypeCoercion>
     <PossiblyNullReference occurrences="1">
       <code>toArray</code>
@@ -19,11 +18,11 @@
       <code>$node</code>
     </LessSpecificReturnStatement>
     <MixedMethodCall occurrences="5">
-      <code>scalarNode</code>
-      <code>isRequired</code>
       <code>cannotBeEmpty</code>
       <code>end</code>
       <code>end</code>
+      <code>isRequired</code>
+      <code>scalarNode</code>
     </MixedMethodCall>
     <MoreSpecificReturnType occurrences="1">
       <code>ArrayNodeDefinition</code>
@@ -50,21 +49,11 @@
       <code>BlockServiceTestCase</code>
       <code>parent::setUp()</code>
     </InternalClass>
-    <InternalMethod occurrences="8">
-      <code>parent::setUp()</code>
-      <code>getBlockContext</code>
+    <InternalMethod occurrences="3">
       <code>assertSettings</code>
-      <code>willReturn</code>
-      <code>willReturn</code>
-      <code>method</code>
-      <code>with</code>
-      <code>willReturn</code>
+      <code>getBlockContext</code>
+      <code>parent::setUp()</code>
     </InternalMethod>
-  </file>
-  <file src="tests/DependencyInjection/NucleosMapsExtensionTest.php">
-    <UndefinedClass occurrences="1">
-      <code>AbstractExtensionTestCase</code>
-    </UndefinedClass>
   </file>
   <file src="tests/bootstrap.php">
     <UnresolvableInclude occurrences="1">

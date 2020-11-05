@@ -1,6 +1,11 @@
 parameters:
 	ignoreErrors:
 		-
+			message: "#^Method Nucleos\\\\MapsBundle\\\\Block\\\\Service\\\\MapBlockService\\:\\:fetchFromAddress\\(\\) should return array\\(float, float\\)\\|null but returns array\\.$#"
+			count: 1
+			path: src/Block/Service/MapBlockService.php
+
+		-
 			message: "#^Call to an undefined method Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\NodeDefinition\\:\\:children\\(\\)\\.$#"
 			count: 1
 			path: src/DependencyInjection/Configuration.php

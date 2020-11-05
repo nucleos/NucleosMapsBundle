@@ -167,6 +167,8 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
 
     /**
      * @return float[]|null
+     *
+     * @phpstan-return array{float, float}|null
      */
     private function getCoordinates(BlockContextInterface $blockContext): ?array
     {
@@ -183,6 +185,16 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
             return null;
         }
 
+        return $this->fetchFromAddress($address);
+    }
+
+    /**
+     * @return float[]|null
+     *
+     * @phpstan-return array{float, float}|null
+     */
+    private function fetchFromAddress(string $address): ?array
+    {
         try {
             $geo = $this->provider->geocodeQuery(GeocodeQuery::create($address))->first();
 
