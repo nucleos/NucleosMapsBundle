@@ -14,7 +14,7 @@ branches:
       enforce_admins: false
       required_status_checks:
         contexts:
-          - "Webpack build"
+          - "Assets build"
           - "Coding Standards (7.4)"
           - "Static Code Analysis (7.4)"
           - "Test (PHP 7.3, symfony 4.4, lowest)"
