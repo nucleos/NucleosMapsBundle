@@ -15,3 +15,18 @@ parameters:
 			count: 1
 			path: src/DependencyInjection/Configuration.php
 
+		-
+			message: "#^Binary operation \"\\.\" between string and array\\<string, mixed\\>\\|int\\|string results in an error\\.$#"
+			count: 7
+			path: src/Twig/MapsExtensions.php
+
+		-
+			message: "#^Binary operation \"\\.\" between array\\<string, mixed\\>\\|int\\|string and ' @nucleos/maps…' results in an error\\.$#"
+			count: 2
+			path: src/Twig/MapsExtensions.php
+
+		-
+			message: "#^Parameter \\#1 \\$attributes of method Nucleos\\\\MapsBundle\\\\Twig\\\\MapsExtensions\\:\\:extractAttributes\\(\\) expects array\\<string, mixed\\>, array\\<string, mixed\\>\\|int\\|string given\\.$#"
+			count: 2
+			path: src/Twig/MapsExtensions.php
+

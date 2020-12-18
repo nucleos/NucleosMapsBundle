@@ -39,6 +39,11 @@
       <code>$config['geocoder']['service']</code>
     </MixedArrayAccess>
   </file>
+  <file src="src/Twig/MapsExtensions.php">
+    <MixedAssignment occurrences="1">
+      <code>$value</code>
+    </MixedAssignment>
+  </file>
   <file src="tests/App/AppKernel.php">
     <DeprecatedClass occurrences="1">
       <code>RouteCollectionBuilder</code>
