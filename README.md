@@ -84,8 +84,8 @@ If you know the exact coordinates:
 
 ### Assets
 
-It is recommended to use [webpack](https://webpack.js.org/) / [webpack-encore](https://github.com/symfony/webpack-encore)
-to include the `widget.js` file in your page. These file is located in the `assets` folder.
+The assets can be loaded via [stimulus](https://stimulusjs.org/).
+When using [webpack-encore](https://github.com/symfony/webpack-encore) with `enableStimulusBridge` everything is pre-configured for you.
 
 ## License
 

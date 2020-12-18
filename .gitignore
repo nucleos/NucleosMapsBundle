@@ -3,8 +3,8 @@
 coverage
 composer.lock
 phpunit.xml
+/assets/node_modules/
 /build/
-/node_modules/
 /vendor/
 !/vendor-bin/tools/composer.lock
 /vendor-bin/tools/vendor/

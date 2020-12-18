@@ -35,7 +35,7 @@ updates:
   - automerge
 
 - package-ecosystem: "npm"
-  directory: "/"
+  directory: "/assets/"
   schedule:
     interval: daily
     time: '04:00'

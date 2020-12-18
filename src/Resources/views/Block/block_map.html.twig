@@ -33,6 +33,7 @@
 
 {% block googlemaps %}
     <div id="map-{{ random() }}" style="height: {{ settings.height }}px"
+         data-controller="@nucleos/maps-bundle/googlemaps"
          data-googlemaps="{{ {
              title: settings.marker_title,
              address: settings.address|replace({'\r\n': ", "}),
@@ -44,6 +45,7 @@
 
 {% block openstreetmap %}
     <div id="map-{{ random() }}" style="height: {{ settings.height }}px"
+         data-controller="@nucleos/maps-bundle/openstreetmap"
          data-openstreetmap="{{ {
              title: settings.marker_title,
              address: settings.address|replace({'\r\n': ", "}),
