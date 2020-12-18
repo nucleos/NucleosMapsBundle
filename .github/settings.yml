@@ -6,7 +6,7 @@ repository:
   name: NucleosMapsBundle
   description: 📍 This bundle provides simple map rendering in symfony application.
   homepage: https://nucleos.rocks
-  topics: hacktoberfest, symfony, symfony-bundle, bundle, php, maps, googlemaps, openstreetmap, sonata, sonata-block
+  topics: hacktoberfest, symfony, symfony-bundle, symfony-ux, bundle, php, maps, googlemaps, openstreetmap, sonata, sonata-block
 
 branches:
   - name: main
