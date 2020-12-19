@@ -28,6 +28,7 @@ final class NucleosMapsExtension extends Extension
 
         $loader = new Loader\PhpFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
         $loader->load('block.php');
+        $loader->load('twig.php');
 
         $container->setAlias('nucleos_maps.geocoder', $config['geocoder']['service'])
             ->setPublic(true)

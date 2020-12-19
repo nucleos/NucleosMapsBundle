@@ -2,8 +2,8 @@
 
 import { Controller } from 'stimulus';
 
-function GoogleMaps(element, options) {
-    const defaultOptions = {
+export default class extends Controller {
+    static defaultOptions = {
         zoom: 13,
         navigationControl: false,
         mapTypeControl: false,
@@ -15,28 +15,46 @@ function GoogleMaps(element, options) {
         apiKey: '',
     };
 
-    this.element = element;
-    this.options = { ...defaultOptions, ...options };
-
-    const createMap = () => {
-        loadScript().then(() => {
-            const options = this.options;
-            // eslint-disable-next-line
+    connect() {
+        this._prepareApi(this.data.get('apikey')).then(() => {
+            let options = { ...this.defaultOptions };
+            // eslint-disable-next-line no-undef
             options.mapTypeId = google.maps.MapTypeId.ROADMAP;
-
             options.center = {
-                lng: this.options.center.longitude,
-                lat: this.options.center.latitude,
+                lng: this.data.get('longitude'),
+                lat: this.data.get('latitude'),
             };
 
             // eslint-disable-next-line
             this.map = new google.maps.Map(this.element, options);
+            const map = this.map;
 
-            setMarker(this.options.center);
+            let markers = [this._createMarker(options.center)];
+
+            this._dispatchEvent('googlemaps:connect', { map: map, markers: markers });
         });
-    };
+    }
 
-    const loadScript = async () => {
+    _createMarker(position) {
+        let markerOptions = {
+            map: this.map,
+            position: position,
+        };
+
+        if (this.data.get('title')) {
+            markerOptions.title = this.data.get('title');
+        }
+
+        if (this.data.get('icon')) {
+            // eslint-disable-next-line
+            markerOptions.icon = new google.maps.MarkerImage(this.data.get('icon'));
+        }
+
+        // eslint-disable-next-line
+        return new google.maps.Marker(markerOptions);
+    }
+
+    async _prepareApi(apiKey) {
         function get(src) {
             return new Promise(function (resolve, reject) {
                 const el = document.createElement('script');
@@ -58,44 +76,18 @@ function GoogleMaps(element, options) {
         }
 
         const myPromises = await get(
-            'https://maps.googleapis.com/maps/api/js?key=' + this.options.apiKey + '&callback=googleMapsInitialized'
+            'https://maps.googleapis.com/maps/api/js?key=' + apiKey + '&callback=googleMapsInitialized'
         );
 
         return await Promise.all(myPromises);
-    };
+    }
 
-    const setMarker = (position) => {
-        let markerOptions = {
-            map: this.map,
-            position: position,
-        };
-
-        if (this.options.title) {
-            markerOptions.title = this.options.title;
+    disconnect() {
+        if (!this.map) {
+            return;
         }
 
-        if (this.options.icon) {
-            // eslint-disable-next-line
-            markerOptions.icon = new google.maps.MarkerImage(options.icon);
-        }
-
-        // eslint-disable-next-line
-        return new google.maps.Marker(markerOptions);
-    };
-
-    createMap();
-}
-
-export default class extends Controller {
-    connect() {
-        let options = JSON.parse(this.element.getAttribute('data-googlemaps'));
-        if (Array.isArray(options) && 0 === options.length) {
-            options = {};
-        }
-
-        const googleMaps = new GoogleMaps(this.element, options);
-
-        this._dispatchEvent('googlemaps:connect', { googleMaps: googleMaps });
+        this.map.remove();
     }
 
     _dispatchEvent(name, payload = null, canBubble = false, cancelable = false) {

@@ -26,10 +26,14 @@ describe('OpenStreetMapController', () => {
 
     beforeEach(() => {
         container = mountDOM(`
-            <span
+            <div
                 data-testid="container"
                 data-controller="check openstreetmap"
-                data-openstreetmap='{"title":"Some title","address":"Buxtehude, Germany", "center": { "longitude": 9.42, "latitude": 53.27 }}'>
+                data-openstreetmap-latitude="53.27"
+                data-openstreetmap-longitude="9.42"
+                data-openstreetmap-zoom="5"
+                data-openstreetmap-height="200"
+                data-openstreetmap-title="Some title">
             </div>
         `);
     });

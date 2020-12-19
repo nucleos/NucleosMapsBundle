@@ -12,6 +12,7 @@ namespace Nucleos\MapsBundle\Tests\DependencyInjection;
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
 use Nucleos\MapsBundle\Block\Service\MapBlockService;
 use Nucleos\MapsBundle\DependencyInjection\NucleosMapsExtension;
+use Nucleos\MapsBundle\Twig\MapsExtensions;
 
 class NucleosMapsExtensionTest extends AbstractExtensionTestCase
 {
@@ -25,6 +26,7 @@ class NucleosMapsExtensionTest extends AbstractExtensionTestCase
         ]);
 
         $this->assertContainerBuilderHasService('nucleos_maps.block.map', MapBlockService::class);
+        $this->assertContainerBuilderHasService(MapsExtensions::class);
     }
 
     protected function getContainerExtensions(): array

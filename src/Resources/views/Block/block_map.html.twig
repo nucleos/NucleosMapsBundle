@@ -25,31 +25,14 @@
 
 {% block map_wrapper %}
     {% if settings.service == 'googlemaps' %}
-        {{ block('googlemaps') }}
+        {{ nucleos_maps_googlemap(coordinates[0], coordinates[1], {
+            title: settings.marker_title,
+            height: settings.height
+        }) }}
     {% elseif settings.service == 'openstreetmap' %}
-        {{ block('openstreetmap') }}
+        {{ nucleos_maps_openstreetmap(coordinates[0], coordinates[1], {
+            title: settings.marker_title,
+            height: settings.height
+        }) }}
     {% endif %}
-{% endblock %}
-
-{% block googlemaps %}
-    <div id="map-{{ random() }}" style="height: {{ settings.height }}px"
-         data-controller="@nucleos/maps-bundle/googlemaps"
-         data-googlemaps="{{ {
-             title: settings.marker_title,
-             address: settings.address|replace({'\r\n': ", "}),
-             center: { longitude: coordinates[0], latitude: coordinates[1] },
-             apiKey: app.request.server.get('GOOGLE_API_KEY', ''),
-         }|json_encode|e('html_attr') }}"
-    ></div>
-{% endblock %}
-
-{% block openstreetmap %}
-    <div id="map-{{ random() }}" style="height: {{ settings.height }}px"
-         data-controller="@nucleos/maps-bundle/openstreetmap"
-         data-openstreetmap="{{ {
-             title: settings.marker_title,
-             address: settings.address|replace({'\r\n': ", "}),
-             center: { longitude: coordinates[0], latitude: coordinates[1] },
-         }|json_encode|e('html_attr') }}"
-    ></div>
 {% endblock %}
