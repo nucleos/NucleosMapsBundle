@@ -127,7 +127,7 @@ jobs:
         run: composer phpstan
 
       - name: "Run psalm"
-        run: vendor/bin/psalm --config=psalm.xml --diff --diff-methods --shepherd --show-info=false --stats --threads=4
+        run: vendor/bin/psalm --config=psalm.xml --diff --shepherd --show-info=false --stats --threads=4
 
       - name: "Run phpmd"
         run: composer phpmd
