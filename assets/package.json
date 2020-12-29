@@ -11,7 +11,7 @@
                 "webpackMode": "lazy",
                 "enabled": true,
                 "autoimport": {
-                    "maps/dist/openstreetmap.css": true
+                    "@nucleos/maps-bundle/dist/openstreetmap.css": true
                 }
             },
             "googlemaps": {
