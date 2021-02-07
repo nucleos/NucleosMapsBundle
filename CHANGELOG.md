@@ -1,16 +1,43 @@
-# 1.1.0
+# Changelog
 
-## Changes
+All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 🚀 Features
+## 2.0.0 - TBD
+
+### Added
+
+- Nothing.
+
+### Changed
+
+- Nothing.
+
+### Deprecated
+
+- Nothing.
+
+### Removed
+
+- Nothing.
+
+### Fixed
+
+- Nothing.
+
+
+## 1.1.0
+
+### Changes
+
+### 🚀 Features
 
 - Move configuration to PHP [@core23] ([#21])
 
-## 🐛 Bug Fixes
+### 🐛 Bug Fixes
 
 - Fix package main file [@core23] ([#26])
 
-## 📦 Dependencies
+### 📦 Dependencies
 
 - Bump sass-loader from 9.0.1 to 9.0.2 [@dependabot] ([#25])
 - Bump sass-loader from 9.0.0 to 9.0.1 [@dependabot] ([#23])
