@@ -64,7 +64,7 @@ jobs:
         run: composer validate --strict
 
       - name: "Cache dependencies installed with composer"
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: ~/.composer/cache
           key: php${{ matrix.php-version }}-composer-
@@ -81,7 +81,7 @@ jobs:
         run: mkdir -p .build/php-cs-fixer
 
       - name: "Cache cache directory for friendsofphp/php-cs-fixer"
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: .build/php-cs-fixer
           key: php${{ matrix.php-version }}-php-cs-fixer-
@@ -113,7 +113,7 @@ jobs:
           php-version: ${{ matrix.php-version }}
 
       - name: "Cache dependencies installed with composer"
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: ~/.composer/cache
           key: ${{ matrix.php-version }}-composer-
@@ -167,7 +167,7 @@ jobs:
         run: composer global require --prefer-dist --no-progress --no-suggest --ansi symfony/flex
 
       - name: "Cache dependencies installed with composer"
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: ~/.composer/cache
           key: php${{ matrix.php-version }}-composer-
@@ -210,7 +210,7 @@ jobs:
           php-version: ${{ matrix.php-version }}
 
       - name: "Cache dependencies installed with composer"
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: ~/.composer/cache
           key: php${{ matrix.php-version }}-composer-
@@ -250,7 +250,7 @@ jobs:
           php-version: ${{ matrix.php-version }}
 
       - name: "Cache dependencies installed with composer"
-        uses: actions/cache@v2
+        uses: actions/cache@v2.1.4
         with:
           path: ~/.composer/cache
           key: php${{ matrix.php-version }}-composer-
