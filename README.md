@@ -8,7 +8,7 @@ NucleosMapsBundle
 [![Monthly Downloads](https://poser.pugx.org/nucleos/maps-bundle/d/monthly)](https://packagist.org/packages/nucleos/maps-bundle)
 [![Daily Downloads](https://poser.pugx.org/nucleos/maps-bundle/d/daily)](https://packagist.org/packages/nucleos/maps-bundle)
 
-[![Continuous Integration](https://github.com/nucleos/NucleosMapsBundle/workflows/Continuous%20Integration/badge.svg)](https://github.com/nucleos/NucleosMapsBundle/actions?query=workflow%3A"Continuous+Integration")
+[![Continuous Integration](https://github.com/nucleos/NucleosMapsBundle/workflows/Continuous%20Integration/badge.svg?event=push)](https://github.com/nucleos/NucleosMapsBundle/actions?query=workflow%3A"Continuous+Integration"+event%3Apush)
 [![Code Coverage](https://codecov.io/gh/nucleos/NucleosMapsBundle/graph/badge.svg)](https://codecov.io/gh/nucleos/NucleosMapsBundle)
 [![Type Coverage](https://shepherd.dev/github/nucleos/NucleosMapsBundle/coverage.svg)](https://shepherd.dev/github/nucleos/NucleosMapsBundle)
 
