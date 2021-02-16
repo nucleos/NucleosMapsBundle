@@ -27,7 +27,8 @@
     <MoreSpecificReturnType occurrences="1">
       <code>ArrayNodeDefinition</code>
     </MoreSpecificReturnType>
-    <PossiblyUndefinedMethod occurrences="1">
+    <PossiblyUndefinedMethod occurrences="2">
+      <code>append</code>
       <code>children</code>
     </PossiblyUndefinedMethod>
   </file>
