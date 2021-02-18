@@ -9,6 +9,7 @@
             "openstreetmap": {
                 "main": "dist/openstreetmap_controller.js",
                 "webpackMode": "lazy",
+                "fetch": "lazy",
                 "enabled": true,
                 "autoimport": {
                     "@nucleos/maps-bundle/dist/openstreetmap.css": true
@@ -17,6 +18,7 @@
             "googlemaps": {
                 "main": "dist/googlemaps_controller.js",
                 "webpackMode": "lazy",
+                "fetch": "lazy",
                 "enabled": true,
                 "autoimport": []
             }

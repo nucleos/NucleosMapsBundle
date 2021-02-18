@@ -25,13 +25,13 @@ var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/de
 
 var _stimulus = require("stimulus");
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
 
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
 
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
 
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
 
 var _default = /*#__PURE__*/function (_Controller) {
   (0, _inherits2["default"])(_default, _Controller);
@@ -48,15 +48,22 @@ var _default = /*#__PURE__*/function (_Controller) {
     value: function connect() {
       var _this = this;
 
-      this._prepareApi(this.data.get('apikey')).then(function () {
-        var options = _objectSpread({}, _this.defaultOptions); // eslint-disable-next-line no-undef
+      this._prepareApi(this.apiKeyValue).then(function () {
+        var options = _objectSpread(_objectSpread({}, _this.defaultOptions), {}, {
+          latitude: _this.latitudeValue,
+          longitude: _this.longitudeValue,
+          zoom: _this.zoomValue,
+          height: _this.heightValue,
+          title: _this.titleValue,
+          apiKey: _this.apiKeyValue,
+          // eslint-disable-next-line no-undef
+          mapTypeId: google.maps.MapTypeId.ROADMAP,
+          center: {
+            lng: _this.longitudeValue,
+            lat: _this.latitudeValue
+          }
+        }); // eslint-disable-next-line
 
-
-        options.mapTypeId = google.maps.MapTypeId.ROADMAP;
-        options.center = {
-          lng: _this.data.get('longitude'),
-          lat: _this.data.get('latitude')
-        }; // eslint-disable-next-line
 
         _this.map = new google.maps.Map(_this.element, options);
         var map = _this.map;
@@ -76,13 +83,13 @@ var _default = /*#__PURE__*/function (_Controller) {
         position: position
       };
 
-      if (this.data.get('title')) {
-        markerOptions.title = this.data.get('title');
+      if (this.titleValue) {
+        markerOptions.title = this.titleValue;
       }
 
-      if (this.data.get('icon')) {
+      if (this.iconValue) {
         // eslint-disable-next-line
-        markerOptions.icon = new google.maps.MarkerImage(this.data.get('icon'));
+        markerOptions.icon = new google.maps.MarkerImage(this.iconValue);
       } // eslint-disable-next-line
 
 
@@ -162,6 +169,15 @@ var _default = /*#__PURE__*/function (_Controller) {
 }(_stimulus.Controller);
 
 exports["default"] = _default;
+(0, _defineProperty2["default"])(_default, "values", {
+  latitude: Number,
+  longitude: Number,
+  zoom: Number,
+  height: Number,
+  title: Boolean,
+  icon: String,
+  apiKey: String
+});
 (0, _defineProperty2["default"])(_default, "defaultOptions", {
   zoom: 13,
   navigationControl: false,

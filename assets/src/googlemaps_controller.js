@@ -3,6 +3,16 @@
 import { Controller } from 'stimulus';
 
 export default class extends Controller {
+    static values = {
+        latitude: Number,
+        longitude: Number,
+        zoom: Number,
+        height: Number,
+        title: Boolean,
+        icon: String,
+        apiKey: String,
+    };
+
     static defaultOptions = {
         zoom: 13,
         navigationControl: false,
@@ -16,13 +26,21 @@ export default class extends Controller {
     };
 
     connect() {
-        this._prepareApi(this.data.get('apikey')).then(() => {
-            let options = { ...this.defaultOptions };
-            // eslint-disable-next-line no-undef
-            options.mapTypeId = google.maps.MapTypeId.ROADMAP;
-            options.center = {
-                lng: this.data.get('longitude'),
-                lat: this.data.get('latitude'),
+        this._prepareApi(this.apiKeyValue).then(() => {
+            let options = {
+                ...this.defaultOptions,
+                latitude: this.latitudeValue,
+                longitude: this.longitudeValue,
+                zoom: this.zoomValue,
+                height: this.heightValue,
+                title: this.titleValue,
+                apiKey: this.apiKeyValue,
+                // eslint-disable-next-line no-undef
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                center: {
+                    lng: this.longitudeValue,
+                    lat: this.latitudeValue,
+                },
             };
 
             // eslint-disable-next-line
@@ -41,13 +59,13 @@ export default class extends Controller {
             position: position,
         };
 
-        if (this.data.get('title')) {
-            markerOptions.title = this.data.get('title');
+        if (this.titleValue) {
+            markerOptions.title = this.titleValue;
         }
 
-        if (this.data.get('icon')) {
+        if (this.iconValue) {
             // eslint-disable-next-line
-            markerOptions.icon = new google.maps.MarkerImage(this.data.get('icon'));
+            markerOptions.icon = new google.maps.MarkerImage(this.iconValue);
         }
 
         // eslint-disable-next-line

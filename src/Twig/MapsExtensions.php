@@ -41,13 +41,13 @@ final class MapsExtensions extends AbstractExtension
         ], $options);
 
         return '<div
-                    data-controller="'.trim($options['controller'].' @nucleos/maps-bundle/googlemaps').'"
-                    data-googlemaps-latitude="'.$latitude.'"
-                    data-googlemaps-longitude="'.$longitude.'"
-                    data-googlemaps-zoom="'.$options['zoom'].'"
-                    data-googlemaps-height="'.$options['height'].'"
-                    data-googlemaps-title="'.$options['title'].'"
-                    data-googlemaps-apikey="'.$options['apiKey'].'"
+                    data-controller="'.trim(($options['controller'] ?? '').' nucleos--maps-bundle--googlemaps').'"
+                    data-nucleos--maps-bundle--googlemaps-latitude-value="'.$latitude.'"
+                    data-nucleos--maps-bundle--googlemaps-longitude-value="'.$longitude.'"
+                    data-nucleos--maps-bundle--googlemaps-zoom-value="'.$options['zoom'].'"
+                    data-nucleos--maps-bundle--googlemaps-height-value="'.$options['height'].'"
+                    data-nucleos--maps-bundle--googlemaps-title-value="'.$options['title'].'"
+                    data-nucleos--maps-bundle--googlemaps-apikey-value="'.$options['apiKey'].'"
                     '.$this->extractAttributes($options['attr']).'></div>';
     }
 
@@ -69,12 +69,12 @@ final class MapsExtensions extends AbstractExtension
         ], $options);
 
         return '<div
-                    data-controller="'.trim($options['controller'].' @nucleos/maps-bundle/openstreetmap').'"
-                    data-openstreetmap-latitude="'.$latitude.'"
-                    data-openstreetmap-longitude="'.$longitude.'"
-                    data-openstreetmap-zoom="'.$options['zoom'].'"
-                    data-openstreetmap-height="'.$options['height'].'"
-                    data-openstreetmap-title="'.$options['title'].'"
+                    data-controller="'.trim(($options['controller'] ?? '').' nucleos--maps-bundle--openstreetmap').'"
+                    data-nucleos--maps-bundle--openstreetmap-latitude-value="'.$latitude.'"
+                    data-nucleos--maps-bundle--openstreetmap-longitude-value="'.$longitude.'"
+                    data-nucleos--maps-bundle--openstreetmap-zoom-value="'.$options['zoom'].'"
+                    data-nucleos--maps-bundle--openstreetmap-height-value="'.$options['height'].'"
+                    data-nucleos--maps-bundle--openstreetmap-title-value="'.$options['title'].'"
                     '.$this->extractAttributes($options['attr']).'></div>';
     }
 
