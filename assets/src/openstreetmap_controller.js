@@ -3,14 +3,24 @@
 import { Controller } from 'stimulus';
 
 export default class extends Controller {
-    connect() {
-        Promise.all([import('leaflet'), import('leaflet-extra-markers')]).then(([L, LM]) => {
-            this.element.style.height = this.data.get('height') + 'px';
+    static values = {
+        latitude: Number,
+        longitude: Number,
+        zoom: Number,
+        height: Number,
+        title: Boolean,
+    };
 
-            let position = [this.data.get('latitude'), this.data.get('longitude')];
-            let options = {
-                center: position,
-            };
+    connect() {
+        let position = [this.latitudeValue, this.longitudeValue];
+
+        let options = {
+            center: position,
+            zoom: this.zoomValue,
+        };
+
+        import('leaflet').then((L) => {
+            this.element.style.height = this.heightValue + 'px';
 
             this.map = L.map(this.element, options);
             const map = this.map;
@@ -19,29 +29,35 @@ export default class extends Controller {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             }).addTo(this.map);
 
-            const icon = LM.ExtraMarkers.icon({
-                icon: 'fa-circle-o',
-                markerColor: 'blue',
-                shape: 'circle',
-                prefix: 'fa',
+            import('leaflet-extra-markers').then((LM) => {
+                const icon = LM.ExtraMarkers.icon({
+                    icon: 'fa-circle-o',
+                    markerColor: 'blue',
+                    shape: 'circle',
+                    prefix: 'fa',
+                });
+
+                const markerOptions = {
+                    icon: icon,
+                };
+
+                let marker = this._createMarker(L, position, markerOptions);
+                marker.addTo(map);
+
+                this._dispatchEvent('openstreetmap:addMarker', { map: map, layer: layer, marker: marker });
             });
 
-            const markerOptions = {
-                icon: icon,
-            };
-
-            let markers = [this._createMarker(L, position, markerOptions)];
-
-            this._dispatchEvent('openstreetmap:connect', { map: map, layer: layer, markers: markers });
+            this._dispatchEvent('openstreetmap:connect', { map: map, layer: layer });
         });
     }
 
     _createMarker(L, position, markerOptions) {
-        const marker = L.marker(position, markerOptions).addTo(this.map);
+        const marker = L.marker(position, markerOptions);
 
-        if (this.data.get('title')) {
-            marker.bindPopup(this.data.get('title')).openPopup();
+        if (this.titleValue) {
+            marker.bindPopup(this.titleValue).openPopup();
         }
+
         return marker;
     }
 

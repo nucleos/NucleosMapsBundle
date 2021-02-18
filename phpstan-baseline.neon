@@ -6,13 +6,13 @@ parameters:
 			path: src/Block/Service/MapBlockService.php
 
 		-
-			message: "#^Binary operation \"\\.\" between string and array\\<string, mixed\\>\\|int\\|string results in an error\\.$#"
-			count: 7
+			message: "#^Binary operation \"\\.\" between array\\<string, mixed\\>\\|int\\|string and ' nucleos\\-\\-maps…' results in an error\\.$#"
+			count: 2
 			path: src/Twig/MapsExtensions.php
 
 		-
-			message: "#^Binary operation \"\\.\" between array\\<string, mixed\\>\\|int\\|string and ' @nucleos/maps…' results in an error\\.$#"
-			count: 2
+			message: "#^Binary operation \"\\.\" between string and array\\<string, mixed\\>\\|int\\|string results in an error\\.$#"
+			count: 7
 			path: src/Twig/MapsExtensions.php
 
 		-

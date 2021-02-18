@@ -29,12 +29,12 @@ describe('GoogleMapsController', () => {
             <div
                 data-testid="container"
                 data-controller="check googlemaps"
-                data-googlemaps-latitude="53.27"
-                data-googlemaps-longitude="9.42"
-                data-googlemaps-zoom="5"
-                data-googlemaps-height="200"
-                data-googlemaps-title="Some title"
-                data-googlemaps-apikey="">
+                data-googlemaps-latitude-value="53.27"
+                data-googlemaps-longitude-value="9.42"
+                data-googlemaps-zoom-value="5"
+                data-googlemaps-height-value="200"
+                data-googlemaps-title-value="Some title"
+                data-googlemaps-apikey-value="">
             </div>
         `);
     });

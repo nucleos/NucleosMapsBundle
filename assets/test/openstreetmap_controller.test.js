@@ -29,11 +29,11 @@ describe('OpenStreetMapController', () => {
             <div
                 data-testid="container"
                 data-controller="check openstreetmap"
-                data-openstreetmap-latitude="53.27"
-                data-openstreetmap-longitude="9.42"
-                data-openstreetmap-zoom="5"
-                data-openstreetmap-height="200"
-                data-openstreetmap-title="Some title">
+                data-openstreetmap-latitude-value="53.27"
+                data-openstreetmap-longitude-value="9.42"
+                data-openstreetmap-zoom-value="5"
+                data-openstreetmap-height-value="200"
+                data-openstreetmap-title-value="Some title">
             </div>
         `);
     });

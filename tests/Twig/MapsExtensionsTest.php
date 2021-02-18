@@ -28,13 +28,13 @@ final class MapsExtensionsTest extends TestCase
     {
         static::assertSame(
             '<div
-                    data-controller="@nucleos/maps-bundle/googlemaps"
-                    data-googlemaps-latitude="12"
-                    data-googlemaps-longitude="23"
-                    data-googlemaps-zoom="13"
-                    data-googlemaps-height="200"
-                    data-googlemaps-title=""
-                    data-googlemaps-apikey=""
+                    data-controller="nucleos--maps-bundle--googlemaps"
+                    data-nucleos--maps-bundle--googlemaps-latitude-value="12"
+                    data-nucleos--maps-bundle--googlemaps-longitude-value="23"
+                    data-nucleos--maps-bundle--googlemaps-zoom-value="13"
+                    data-nucleos--maps-bundle--googlemaps-height-value="200"
+                    data-nucleos--maps-bundle--googlemaps-title-value=""
+                    data-nucleos--maps-bundle--googlemaps-apikey-value=""
                     ></div>',
             $this->extension->renderGoogleMap(12, 23)
         );
@@ -44,13 +44,13 @@ final class MapsExtensionsTest extends TestCase
     {
         static::assertSame(
             '<div
-                    data-controller="mycontroller @nucleos/maps-bundle/googlemaps"
-                    data-googlemaps-latitude="12"
-                    data-googlemaps-longitude="23"
-                    data-googlemaps-zoom="5"
-                    data-googlemaps-height="200"
-                    data-googlemaps-title="Some title"
-                    data-googlemaps-apikey="MY_KEY"
+                    data-controller="mycontroller nucleos--maps-bundle--googlemaps"
+                    data-nucleos--maps-bundle--googlemaps-latitude-value="12"
+                    data-nucleos--maps-bundle--googlemaps-longitude-value="23"
+                    data-nucleos--maps-bundle--googlemaps-zoom-value="5"
+                    data-nucleos--maps-bundle--googlemaps-height-value="200"
+                    data-nucleos--maps-bundle--googlemaps-title-value="Some title"
+                    data-nucleos--maps-bundle--googlemaps-apikey-value="MY_KEY"
                     class="myclass"></div>',
             $this->extension->renderGoogleMap(
                 12,
@@ -73,12 +73,12 @@ final class MapsExtensionsTest extends TestCase
     {
         static::assertSame(
             '<div
-                    data-controller="@nucleos/maps-bundle/openstreetmap"
-                    data-openstreetmap-latitude="12"
-                    data-openstreetmap-longitude="23"
-                    data-openstreetmap-zoom="13"
-                    data-openstreetmap-height="200"
-                    data-openstreetmap-title=""
+                    data-controller="nucleos--maps-bundle--openstreetmap"
+                    data-nucleos--maps-bundle--openstreetmap-latitude-value="12"
+                    data-nucleos--maps-bundle--openstreetmap-longitude-value="23"
+                    data-nucleos--maps-bundle--openstreetmap-zoom-value="13"
+                    data-nucleos--maps-bundle--openstreetmap-height-value="200"
+                    data-nucleos--maps-bundle--openstreetmap-title-value=""
                     ></div>',
             $this->extension->renderOpenStreetMap(12, 23)
         );
@@ -88,12 +88,12 @@ final class MapsExtensionsTest extends TestCase
     {
         static::assertSame(
             '<div
-                    data-controller="mycontroller @nucleos/maps-bundle/openstreetmap"
-                    data-openstreetmap-latitude="12"
-                    data-openstreetmap-longitude="23"
-                    data-openstreetmap-zoom="5"
-                    data-openstreetmap-height="200"
-                    data-openstreetmap-title="Some title"
+                    data-controller="mycontroller nucleos--maps-bundle--openstreetmap"
+                    data-nucleos--maps-bundle--openstreetmap-latitude-value="12"
+                    data-nucleos--maps-bundle--openstreetmap-longitude-value="23"
+                    data-nucleos--maps-bundle--openstreetmap-zoom-value="5"
+                    data-nucleos--maps-bundle--openstreetmap-height-value="200"
+                    data-nucleos--maps-bundle--openstreetmap-title-value="Some title"
                     class="myclass"></div>',
             $this->extension->renderOpenStreetMap(
                 12,
