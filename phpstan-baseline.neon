@@ -6,11 +6,6 @@ parameters:
 			path: src/Block/Service/MapBlockService.php
 
 		-
-			message: "#^Cannot call method end\\(\\) on Symfony\\\\Component\\\\Config\\\\Definition\\\\Builder\\\\NodeParentInterface\\|null\\.$#"
-			count: 1
-			path: src/DependencyInjection/Configuration.php
-
-		-
 			message: "#^Binary operation \"\\.\" between string and array\\<string, mixed\\>\\|int\\|string results in an error\\.$#"
 			count: 7
 			path: src/Twig/MapsExtensions.php
