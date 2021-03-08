@@ -65,6 +65,8 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
             'coordinates' => $coordinates,
         ];
 
+        \assert(null !== $blockContext->getTemplate());
+
         return $this->renderResponse($blockContext->getTemplate(), $parameters, $response);
     }
 
