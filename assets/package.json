@@ -34,7 +34,7 @@
         "@babel/core": "^7.13.8",
         "@babel/eslint-parser": "^7.13.10",
         "@babel/plugin-proposal-class-properties": "^7.13.0",
-        "@babel/plugin-transform-runtime": "^7.13.9",
+        "@babel/plugin-transform-runtime": "^7.13.10",
         "@babel/preset-env": "^7.13.9",
         "@size-limit/preset-small-lib": "^4.10.0",
         "@symfony/stimulus-testing": "^1.1.0",
