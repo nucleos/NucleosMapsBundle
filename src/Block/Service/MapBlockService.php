@@ -15,7 +15,7 @@ use Geocoder\Exception\Exception;
 use Geocoder\Provider\Provider;
 use Geocoder\Query\GeocodeQuery;
 use Psr\Log\LoggerAwareInterface;
-use Psr\Log\LoggerAwareTrait;
+use Psr\Log\LoggerInterface;
 use Psr\Log\NullLogger;
 use Sonata\BlockBundle\Block\BlockContextInterface;
 use Sonata\BlockBundle\Block\Service\AbstractBlockService;
@@ -35,7 +35,10 @@ use Twig\Environment;
 
 final class MapBlockService extends AbstractBlockService implements EditableBlockService, LoggerAwareInterface
 {
-    use LoggerAwareTrait;
+    /**
+     * @var LoggerInterface
+     */
+    private $logger;
 
     /**
      * @var Provider
@@ -48,6 +51,11 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
 
         $this->provider = $provider;
         $this->logger   = new NullLogger();
+    }
+
+    public function setLogger(LoggerInterface $logger): void
+    {
+        $this->logger = $logger;
     }
 
     public function execute(BlockContextInterface $blockContext, ?Response $response = null): Response
