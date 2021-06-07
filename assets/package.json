@@ -38,7 +38,7 @@
         "@babel/preset-env": "^7.14.4",
         "@size-limit/preset-small-lib": "^4.11.0",
         "@symfony/stimulus-testing": "^1.1.0",
-        "eslint": "^7.27.0",
+        "eslint": "^7.28.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-import": "^2.23.4",
         "eslint-plugin-jest": "^24.3.6",
