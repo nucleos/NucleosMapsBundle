@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.7.1@cd53e047a58f71f646dd6bf45476076ab07b5d44">
+<files psalm-version="4.8.1@f73f2299dbc59a3e6c4d66cff4605176e728ee69">
   <file src="src/Block/Service/MapBlockService.php">
     <MixedAssignment occurrences="2">
       <code>$latitude</code>
@@ -21,23 +21,15 @@
     </UnusedClosureParam>
   </file>
   <file src="src/DependencyInjection/Configuration.php">
-    <LessSpecificReturnStatement occurrences="1">
-      <code>$node</code>
-    </LessSpecificReturnStatement>
-    <MixedMethodCall occurrences="5">
-      <code>cannotBeEmpty</code>
+    <PossiblyNullReference occurrences="1">
       <code>end</code>
+    </PossiblyNullReference>
+    <PossiblyUndefinedMethod occurrences="1">
       <code>end</code>
-      <code>isRequired</code>
-      <code>scalarNode</code>
-    </MixedMethodCall>
-    <MoreSpecificReturnType occurrences="1">
-      <code>ArrayNodeDefinition</code>
-    </MoreSpecificReturnType>
-    <PossiblyUndefinedMethod occurrences="2">
-      <code>append</code>
-      <code>children</code>
     </PossiblyUndefinedMethod>
+    <UnusedMethodCall occurrences="1">
+      <code>end</code>
+    </UnusedMethodCall>
   </file>
   <file src="src/DependencyInjection/NucleosMapsExtension.php">
     <MixedArgument occurrences="1">
