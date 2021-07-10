@@ -55,7 +55,9 @@ export default class extends Controller {
         const marker = L.marker(position, markerOptions);
 
         if (this.titleValue) {
-            marker.bindPopup(this.titleValue).openPopup();
+            const popup = L.popup().setContent(this.titleValue);
+
+            marker.bindPopup(popup).openPopup();
         }
 
         return marker;

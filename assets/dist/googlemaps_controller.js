@@ -49,6 +49,8 @@ var _default = /*#__PURE__*/function (_Controller) {
       var _this = this;
 
       this._prepareApi(this.apiKeyValue).then(function () {
+        _this.element.style.height = _this.heightValue + 'px';
+
         var options = _objectSpread(_objectSpread({}, _this.defaultOptions), {}, {
           latitude: _this.latitudeValue,
           longitude: _this.longitudeValue,
@@ -174,7 +176,7 @@ exports["default"] = _default;
   longitude: Number,
   zoom: Number,
   height: Number,
-  title: Boolean,
+  title: String,
   icon: String,
   apiKey: String
 });
@@ -184,8 +186,5 @@ exports["default"] = _default;
   mapTypeControl: false,
   scaleControl: false,
   draggable: false,
-  scrollwheel: false,
-  title: false,
-  icon: false,
-  apiKey: ''
+  scrollwheel: false
 });
