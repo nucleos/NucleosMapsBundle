@@ -105,7 +105,7 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
                         'googlemaps'    => 'googlemaps',
                         'openstreetmap' => 'openstreetmap',
                     ],
-                    'choice_label' => static function (string $value, string $key, int $index): string {
+                    'choice_label' => static function (string $value, string $key): string {
                         return 'service.'.$key;
                     },
                 ]],
