@@ -96,7 +96,8 @@ var _default = /*#__PURE__*/function (_Controller) {
       var marker = L.marker(position, markerOptions);
 
       if (this.titleValue) {
-        marker.bindPopup(this.titleValue).openPopup();
+        var popup = L.popup().setContent(this.titleValue);
+        marker.bindPopup(popup).openPopup();
       }
 
       return marker;

@@ -8,7 +8,7 @@ export default class extends Controller {
         longitude: Number,
         zoom: Number,
         height: Number,
-        title: Boolean,
+        title: String,
         icon: String,
         apiKey: String,
     };
@@ -20,13 +20,12 @@ export default class extends Controller {
         scaleControl: false,
         draggable: false,
         scrollwheel: false,
-        title: false,
-        icon: false,
-        apiKey: '',
     };
 
     connect() {
         this._prepareApi(this.apiKeyValue).then(() => {
+            this.element.style.height = this.heightValue + 'px';
+
             let options = {
                 ...this.defaultOptions,
                 latitude: this.latitudeValue,
