@@ -8,7 +8,7 @@ export default class extends Controller {
         longitude: Number,
         zoom: Number,
         height: Number,
-        title: Boolean,
+        title: String,
     };
 
     connect() {
@@ -41,8 +41,7 @@ export default class extends Controller {
                     icon: icon,
                 };
 
-                let marker = this._createMarker(L, position, markerOptions);
-                marker.addTo(map);
+                let marker = this._createMarker(L, map, position, markerOptions);
 
                 this._dispatchEvent('openstreetmap:addMarker', { map: map, layer: layer, marker: marker });
             });
@@ -51,13 +50,39 @@ export default class extends Controller {
         });
     }
 
-    _createMarker(L, position, markerOptions) {
-        const marker = L.marker(position, markerOptions);
+    _createMarker(L, map, position, markerOptions) {
+        let marker = L.marker(position, markerOptions).addTo(map);
 
         if (this.titleValue) {
-            const popup = L.popup().setContent(this.titleValue);
+            marker.bindPopup(this.titleValue);
 
-            marker.bindPopup(popup).openPopup();
+            let isClicked = false;
+
+            marker.on({
+                mouseover: function () {
+                    if (!isClicked) {
+                        this.openPopup();
+                    }
+                },
+                mouseout: function () {
+                    if (!isClicked) {
+                        this.closePopup();
+                    }
+                },
+                click: function () {
+                    isClicked = true;
+                    this.openPopup();
+                },
+            });
+
+            map.on({
+                click: function () {
+                    isClicked = false;
+                },
+                popupclose: function () {
+                    isClicked = false;
+                },
+            });
         }
 
         return marker;
