@@ -2,28 +2,47 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 2.0.0 - TBD
+## 2.0.0 - 2021-07-11
 
-### Added
 
-- Nothing.
 
-### Changed
+-----
 
-- Nothing.
+### Release Notes for [2.0.0](https://github.com/nucleos/NucleosMapsBundle/milestone/1)
 
-### Deprecated
 
-- Nothing.
 
-### Removed
+### 2.0.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **11**
+- Total contributors: **1**
 
-### Fixed
+#### Bug
 
-- Nothing.
+ - [475: Fix openstreetmap marker init](https://github.com/nucleos/NucleosMapsBundle/pull/475) thanks to @core23
+ - [474: Fix stimulus init](https://github.com/nucleos/NucleosMapsBundle/pull/474) thanks to @core23
+ - [473: Fix block error](https://github.com/nucleos/NucleosMapsBundle/pull/473) thanks to @core23
+ - [280: Normalize stimulus controller names](https://github.com/nucleos/NucleosMapsBundle/pull/280) thanks to @core23
+ - [197: Fix stimulus import](https://github.com/nucleos/NucleosMapsBundle/pull/197) thanks to @core23
+ - [26: Fix package main file](https://github.com/nucleos/NucleosMapsBundle/pull/26) thanks to @core23
 
+#### Feature Request
+
+ - [185: Add twig functions to render maps](https://github.com/nucleos/NucleosMapsBundle/pull/185) thanks to @core23
+ - [21: Move configuration to PHP](https://github.com/nucleos/NucleosMapsBundle/pull/21) thanks to @core23
+
+#### BC Break,Feature Request
+
+ - [181: Use stimulus to load assets](https://github.com/nucleos/NucleosMapsBundle/pull/181) thanks to @core23
+
+#### dependency
+
+ - [154: Add support for PHP 8](https://github.com/nucleos/NucleosMapsBundle/pull/154) thanks to @core23
+
+#### BC Break
+
+ - [7: Remove geocoder chain](https://github.com/nucleos/NucleosMapsBundle/pull/7) thanks to @core23
 
 ## 1.1.0
 
