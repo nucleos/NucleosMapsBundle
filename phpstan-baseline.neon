@@ -1,11 +1,6 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Method Nucleos\\\\MapsBundle\\\\Block\\\\Service\\\\MapBlockService\\:\\:fetchFromAddress\\(\\) should return array\\(float, float\\)\\|null but returns array\\.$#"
-			count: 1
-			path: src/Block/Service/MapBlockService.php
-
-		-
 			message: "#^Binary operation \"\\.\" between array\\<string, mixed\\>\\|int\\|string and ' nucleos\\-\\-maps…' results in an error\\.$#"
 			count: 2
 			path: src/Twig/MapsExtensions.php

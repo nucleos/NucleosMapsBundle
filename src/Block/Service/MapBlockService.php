@@ -186,7 +186,7 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
         $latitude  = $blockContext->getSetting('latitude');
 
         if (null !== $longitude && null !== $latitude) {
-            return [(float) $longitude,  (float) $latitude];
+            return [(float) $latitude, (float) $longitude];
         }
 
         $address = $blockContext->getSetting('address');
@@ -206,13 +206,14 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
     private function fetchFromAddress(string $address): ?array
     {
         try {
-            $geo = $this->provider->geocodeQuery(GeocodeQuery::create($address))->first();
+            $geo         = $this->provider->geocodeQuery(GeocodeQuery::create($address))->first();
+            $coordinates = $geo->getCoordinates();
 
-            if (null === $geo->getCoordinates()) {
+            if (null === $coordinates) {
                 return null;
             }
 
-            return $geo->getCoordinates()->toArray();
+            return [$coordinates->getLatitude(), $coordinates->getLongitude()];
         } catch (Exception $e) {
             $this->logger->warning(sprintf('Error fetch geo information for %s', $address), [
                 'exception' => $e,
