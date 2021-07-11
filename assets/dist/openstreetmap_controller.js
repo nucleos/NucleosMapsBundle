@@ -73,9 +73,7 @@ var _default = /*#__PURE__*/function (_Controller) {
             icon: icon
           };
 
-          var marker = _this._createMarker(L, position, markerOptions);
-
-          marker.addTo(map);
+          var marker = _this._createMarker(L, map, position, markerOptions);
 
           _this._dispatchEvent('openstreetmap:addMarker', {
             map: map,
@@ -92,12 +90,36 @@ var _default = /*#__PURE__*/function (_Controller) {
     }
   }, {
     key: "_createMarker",
-    value: function _createMarker(L, position, markerOptions) {
-      var marker = L.marker(position, markerOptions);
+    value: function _createMarker(L, map, position, markerOptions) {
+      var marker = L.marker(position, markerOptions).addTo(map);
 
       if (this.titleValue) {
-        var popup = L.popup().setContent(this.titleValue);
-        marker.bindPopup(popup).openPopup();
+        marker.bindPopup(this.titleValue);
+        var isClicked = false;
+        marker.on({
+          mouseover: function mouseover() {
+            if (!isClicked) {
+              this.openPopup();
+            }
+          },
+          mouseout: function mouseout() {
+            if (!isClicked) {
+              this.closePopup();
+            }
+          },
+          click: function click() {
+            isClicked = true;
+            this.openPopup();
+          }
+        });
+        map.on({
+          click: function click() {
+            isClicked = false;
+          },
+          popupclose: function popupclose() {
+            isClicked = false;
+          }
+        });
       }
 
       return marker;
@@ -132,5 +154,5 @@ exports["default"] = _default;
   longitude: Number,
   zoom: Number,
   height: Number,
-  title: Boolean
+  title: String
 });
