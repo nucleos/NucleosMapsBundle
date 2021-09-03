@@ -6,7 +6,7 @@ parameters:
 			path: src/Twig/MapsExtensions.php
 
 		-
-			message: "#^Binary operation \"\\.\" between string and array\\<string, mixed\\>\\|int\\|string results in an error\\.$#"
+			message: "#^Binary operation \"\\.\" between non\\-empty\\-string and array\\<string, mixed\\>\\|int\\|string results in an error\\.$#"
 			count: 7
 			path: src/Twig/MapsExtensions.php
 
