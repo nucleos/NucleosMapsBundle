@@ -38,7 +38,7 @@
         "@babel/plugin-proposal-class-properties": "^7.13.0",
         "@babel/plugin-transform-runtime": "^7.15.8",
         "@babel/preset-env": "^7.15.8",
-        "@size-limit/preset-small-lib": "^5.0.5",
+        "@size-limit/preset-small-lib": "^6.0.1",
         "@symfony/stimulus-testing": "^1.1.0",
         "eslint": "^7.32.0",
         "eslint-config-prettier": "^8.3.0",
@@ -46,7 +46,7 @@
         "eslint-plugin-jest": "^25.0.1",
         "node-sass": "^6.0.1",
         "prettier": "^2.4.1",
-        "size-limit": "^5.0.5",
+        "size-limit": "^6.0.1",
         "stimulus": "^2.0.0"
     },
     "scripts": {
