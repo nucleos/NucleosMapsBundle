@@ -44,15 +44,15 @@
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-import": "^2.25.3",
         "eslint-plugin-jest": "^25.3.0",
-        "node-sass": "^6.0.1",
+        "sass": "^1.44.0",
         "prettier": "^2.5.0",
         "size-limit": "^6.0.4",
         "stimulus": "^2.0.0"
     },
     "scripts": {
         "build": "babel src -d dist && yarn sass:build",
-        "sass:build": "node-sass src -o dist",
-        "sass:watch": "node-sass -w src -o dist",
+        "sass:build": "sass src:dist",
+        "sass:watch": "sass -w src:dist",
         "test": "yarn build && jest",
         "lint": "eslint src test --fix",
         "format": "prettier {src,test}/*.js --write",
