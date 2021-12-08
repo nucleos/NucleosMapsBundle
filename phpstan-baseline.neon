@@ -15,3 +15,18 @@ parameters:
 			count: 2
 			path: src/Twig/MapsExtensions.php
 
+		-
+			message: "#^Method Nucleos\\\\MapsBundle\\\\Tests\\\\App\\\\AppKernel\\:\\:configureContainer\\(\\) has parameter \\$container with no type specified\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Method Nucleos\\\\MapsBundle\\\\Tests\\\\App\\\\AppKernel\\:\\:configureContainer\\(\\) has parameter \\$loader with no type specified\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+
+		-
+			message: "#^Method Nucleos\\\\MapsBundle\\\\Tests\\\\App\\\\AppKernel\\:\\:configureRoutes\\(\\) has parameter \\$routes with no type specified\\.$#"
+			count: 1
+			path: tests/App/AppKernel.php
+

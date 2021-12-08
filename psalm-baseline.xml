@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.8.1@f73f2299dbc59a3e6c4d66cff4605176e728ee69">
+<files psalm-version="v4.14.0@14dcbc908ab2625cd7a74258ee6c740cbecc6140">
   <file src="src/Block/Service/MapBlockService.php">
     <MixedAssignment occurrences="2">
       <code>$latitude</code>
       <code>$longitude</code>
     </MixedAssignment>
-    <MixedReturnTypeCoercion occurrences="2">
-      <code>$geo-&gt;getCoordinates()-&gt;toArray()</code>
-      <code>array{float, float}|null</code>
-    </MixedReturnTypeCoercion>
     <PossiblyNullArgument occurrences="1">
       <code>$blockContext-&gt;getTemplate()</code>
     </PossiblyNullArgument>
-    <PossiblyNullReference occurrences="1">
-      <code>toArray</code>
-    </PossiblyNullReference>
-    <UnusedClosureParam occurrences="2">
-      <code>$index</code>
+    <UnusedClosureParam occurrences="1">
       <code>$value</code>
     </UnusedClosureParam>
   </file>
@@ -45,9 +37,18 @@
     </MixedAssignment>
   </file>
   <file src="tests/App/AppKernel.php">
-    <DeprecatedClass occurrences="1">
-      <code>RouteCollectionBuilder</code>
-    </DeprecatedClass>
+    <MissingParamType occurrences="3">
+      <code>$container</code>
+      <code>$loader</code>
+      <code>$routes</code>
+    </MissingParamType>
+    <MixedMethodCall occurrences="2">
+      <code>add</code>
+      <code>load</code>
+    </MixedMethodCall>
+    <PropertyNotSetInConstructor occurrences="1">
+      <code>AppKernel</code>
+    </PropertyNotSetInConstructor>
   </file>
   <file src="tests/bootstrap.php">
     <UnresolvableInclude occurrences="1">
