@@ -1,2 +1,4 @@
-@import url(~leaflet/dist/leaflet.css);
-@import url(~leaflet-extra-markers/dist/css/leaflet.extra-markers.min.css);
+@import '~leaflet/dist/leaflet.css';
+@import '~leaflet-extra-markers/dist/css/leaflet.extra-markers.min.css';
+
+/*# sourceMappingURL=OpenStreetMap.css.map */
