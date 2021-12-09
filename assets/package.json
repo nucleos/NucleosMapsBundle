@@ -39,7 +39,7 @@
         "@babel/plugin-transform-runtime": "^7.16.4",
         "@babel/preset-env": "^7.16.4",
         "@size-limit/preset-small-lib": "^6.0.4",
-        "@symfony/stimulus-testing": "^1.1.0",
+        "@symfony/stimulus-testing": "^2.0.1",
         "eslint": "^8.4.1",
         "eslint-config-prettier": "^8.3.0",
         "eslint-plugin-import": "^2.25.3",
