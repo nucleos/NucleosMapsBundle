@@ -2,27 +2,31 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 2.1.0 - TBD
+## 2.1.0 - 2021-12-09
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [2.1.0](https://github.com/nucleos/NucleosMapsBundle/milestone/3)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 2.1.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **5**
+- Total contributors: **1**
 
-### Removed
+#### dependency
 
-- Nothing.
+ - [619: Add psr/log 2 / 3 support](https://github.com/nucleos/NucleosMapsBundle/pull/619) thanks to @core23
+ - [617: Drop symfony 4 support](https://github.com/nucleos/NucleosMapsBundle/pull/617) thanks to @core23
+ - [602: Drop PHP 7 support](https://github.com/nucleos/NucleosMapsBundle/pull/602) thanks to @core23
 
-### Fixed
+#### Enhancement
 
-- Nothing.
+ - [615: Drop node-sass](https://github.com/nucleos/NucleosMapsBundle/pull/615) thanks to @core23
+ - [613: Update tools and use make to run them](https://github.com/nucleos/NucleosMapsBundle/pull/613) thanks to @core23
 
 ## 2.0.0 - 2021-07-11
 
