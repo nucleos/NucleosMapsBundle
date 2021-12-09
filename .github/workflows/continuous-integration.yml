@@ -149,7 +149,6 @@ jobs:
 
         symfony:
           - 5.4
-          - 6.0
 
     steps:
       - name: "Checkout"
