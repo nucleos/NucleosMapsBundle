@@ -1406,10 +1406,10 @@
   resolved "https://registry.yarnpkg.com/@stimulus/webpack-helpers/-/webpack-helpers-2.0.0.tgz#54296d2a2dffd4f962d2e802d99a3fdd84b8845f"
   integrity sha512-D6tJWsAC024MwGEIKlUVYU8Ln87mlrmiwHvYAjipg+s8H4eLxUMQ3PZkWyPevfipH+oR3leuHsjYsK1gN5ViQA==
 
-"@symfony/stimulus-testing@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@symfony/stimulus-testing/-/stimulus-testing-1.1.0.tgz#2b0304603557399200762144bd1b651ee9c94885"
-  integrity sha512-/80D7ilui6VSB4jQ2I0eN7QXjcsN6cUclwJjxUE34rbURGiIfqSYt2kJ06W9t7DYJxpFAORekCK2Hk6VhUiBqA==
+"@symfony/stimulus-testing@^2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@symfony/stimulus-testing/-/stimulus-testing-2.0.1.tgz#c39e39ea061201bb0de0c7a3c59246372f683cdf"
+  integrity sha512-fg85btiYoBV8iSUIca+Q200tU+AWYvujxnry9SOtXsGIkNAJ/PmtAMYTB2WZUDcNINWeWDT8D2IAkDgaSu+lVA==
   dependencies:
     "@testing-library/dom" "^7.28.1"
     "@testing-library/jest-dom" "^5.11.6"
