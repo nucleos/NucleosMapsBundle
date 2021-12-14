@@ -1,6 +1,6 @@
 'use strict';
 
-import { Application, Controller } from 'stimulus';
+import { Application, Controller } from '@hotwired/stimulus';
 import { getByTestId, waitFor } from '@testing-library/dom';
 import { clearDOM, mountDOM } from '@symfony/stimulus-testing';
 import OpenStreetMapController from '../src/openstreetmap_controller'; // Controller used to check the actual controller was properly booted
