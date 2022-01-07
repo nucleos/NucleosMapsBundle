@@ -1,0 +1,40 @@
+name: 'Assets'
+
+on:
+  create:
+  pull_request:
+  push:
+    branches:
+      - '[0-9]+.[0-9]+.x'
+      - 'refs/pull/*'
+
+jobs:
+  webpack:
+    name: 'Build Assets'
+
+    runs-on: "ubuntu-latest"
+
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v2"
+
+      - name: "Using Node"
+        uses: "actions/setup-node@v2.5.1"
+
+      - name: "Install dependencies"
+        run: "yarn --cwd assets"
+
+      - name: "Build"
+        run: "yarn --cwd assets build"
+
+      - name: "Test"
+        run: "yarn --cwd assets test"
+
+      - name: "Lint"
+        run: "yarn --cwd assets check-lint"
+
+      - name: "Format"
+        run: "yarn --cwd assets check-format"
+
+      - name: "Check size"
+        run: "yarn --cwd assets size"
