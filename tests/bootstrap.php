@@ -9,10 +9,12 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-if (file_exists($file = __DIR__.'/autoload.php')) {
-    require_once $file;
-} elseif (file_exists($file = __DIR__.'/autoload.php.dist')) {
-    require_once $file;
+$files = array_filter([
+    __DIR__.'/autoload.php',
+    __DIR__.'/autoload.php.dist',
+], 'file_exists');
+if ([] !== $files) {
+    require_once current($files);
 }
 
 // try to get Symfony's PHPunit Bridge
@@ -22,6 +24,6 @@ $files = array_filter([
     __DIR__.'/../../../../vendor/symfony/symfony/src/Symfony/Bridge/PhpUnit/bootstrap.php',
     __DIR__.'/../../../../vendor/symfony/phpunit-bridge/bootstrap.php',
 ], 'file_exists');
-if (count($files) > 0) {
+if ([] !== $files) {
     require_once current($files);
 }
