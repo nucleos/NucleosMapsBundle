@@ -45,7 +45,7 @@
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-jest": "^26.1.4",
-        "sass": "^1.50.0",
+        "sass": "^1.50.1",
         "prettier": "^2.6.2",
         "size-limit": "^6.0.4"
     },
