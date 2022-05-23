@@ -41,7 +41,7 @@
         "@hotwired/stimulus": "^3.0.1",
         "@size-limit/preset-small-lib": "^6.0.4",
         "@symfony/stimulus-testing": "^2.0.1",
-        "eslint": "^8.15.0",
+        "eslint": "^8.16.0",
         "eslint-config-prettier": "^8.5.0",
         "eslint-plugin-import": "^2.26.0",
         "eslint-plugin-jest": "^26.2.2",
