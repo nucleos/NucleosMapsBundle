@@ -47,7 +47,7 @@
         "eslint-plugin-jest": "^26.4.6",
         "sass": "^1.52.2",
         "prettier": "^2.6.2",
-        "size-limit": "^6.0.4"
+        "size-limit": "^7.0.0"
     },
     "scripts": {
         "build": "babel src -d dist && yarn sass:build",
