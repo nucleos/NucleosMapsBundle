@@ -21,15 +21,9 @@ use Sonata\BlockBundle\Block\BlockContext;
 use Sonata\BlockBundle\Model\Block;
 use Sonata\BlockBundle\Test\BlockServiceTestCase;
 use Symfony\Component\HttpFoundation\Response;
-use Twig\Environment;
 
 final class MapBlockServiceTest extends BlockServiceTestCase
 {
-    /**
-     * @var Environment&MockObject
-     */
-    protected $twig;
-
     /**
      * @var MockObject&Provider
      */
@@ -39,7 +33,6 @@ final class MapBlockServiceTest extends BlockServiceTestCase
     {
         parent::setUp();
 
-        $this->twig              = $this->createMock(Environment::class);
         $this->provider          = $this->createMock(Provider::class);
     }
 
