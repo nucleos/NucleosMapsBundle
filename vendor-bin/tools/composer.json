@@ -15,11 +15,14 @@
         "phpstan/phpstan-symfony": "^1.0",
         "phpunit/phpunit": "^9.5",
         "psalm/plugin-phpunit": "^0.17",
-        "psalm/plugin-symfony": "^3.0",
+        "psalm/plugin-symfony": "^5.0",
         "symfony/phpunit-bridge": "^6.0",
         "vimeo/psalm": "^5.0"
     },
     "config": {
+        "allow-plugins": {
+            "phpstan/extension-installer": true
+        },
         "bin-dir": "../../vendor/bin",
         "platform": {
             "php": "8.0.2"
