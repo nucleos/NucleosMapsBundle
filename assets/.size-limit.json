@@ -1,0 +1,16 @@
+[
+    {
+        "path": "./dist/*.js",
+        "gzip": false,
+        "limit": "170 KB"
+    },
+    {
+        "path": "./dist/*.css",
+        "gzip": false,
+        "limit": "30 KB",
+        "ignore": [
+            "~leaflet/dist/leaflet.css",
+            "~leaflet-extra-markers/dist/css/leaflet.extra-markers.min.css"
+        ]
+    }
+]

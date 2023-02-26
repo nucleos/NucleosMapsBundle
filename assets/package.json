@@ -33,21 +33,23 @@
     },
     "devDependencies": {
         "@babel/cli": "^7.17.10",
-        "@babel/core": "^7.18.2",
+        "@babel/core": "^7.20.12",
         "@babel/eslint-parser": "^7.18.2",
         "@babel/plugin-proposal-class-properties": "^7.16.7",
         "@babel/plugin-transform-runtime": "^7.18.2",
         "@babel/preset-env": "^7.18.2",
         "@hotwired/stimulus": "^3.0.1",
-        "@size-limit/preset-small-lib": "^6.0.4",
+        "@size-limit/esbuild": "^8.1.1",
+        "@size-limit/preset-small-lib": "^8.1.2",
         "@symfony/stimulus-testing": "^2.0.1",
-        "eslint": "^8.16.0",
+        "eslint": "^8.32.0",
         "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-import": "^2.27.5",
         "eslint-plugin-jest": "^27.0.0",
-        "sass": "^1.52.2",
         "prettier": "^2.6.2",
-        "size-limit": "^8.0.0"
+        "sass": "^1.57.1",
+        "sass-loader": "^13.2.0",
+        "size-limit": "^8.1.2"
     },
     "scripts": {
         "build": "babel src -d dist && yarn sass:build",
@@ -67,18 +69,6 @@
         "jsxBracketSameLine": true,
         "singleQuote": true
     },
-    "size-limit": [
-        {
-            "path": "./dist/*.js",
-            "gzip": false,
-            "limit": "165 KB"
-        },
-        {
-            "path": "./dist/*.css",
-            "gzip": false,
-            "limit": "30 KB"
-        }
-    ],
     "jest": {
         "testRegex": "test/.*\\.test.js",
         "setupFilesAfterEnv": [
