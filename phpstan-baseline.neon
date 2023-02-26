@@ -1,18 +1,13 @@
 parameters:
 	ignoreErrors:
 		-
-			message: "#^Binary operation \"\\.\" between array\\<string, mixed\\>\\|int\\|string and ' nucleos\\-\\-maps…' results in an error\\.$#"
-			count: 2
+			message: "#^Offset 'controller' on array\\{height\\: int, title\\: string, zoom\\: int, controller\\: string, apiKey\\: string, attr\\: array\\<string, mixed\\>\\} on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 1
 			path: src/Twig/MapsExtensions.php
 
 		-
-			message: "#^Binary operation \"\\.\" between non\\-empty\\-string and array\\<string, mixed\\>\\|int\\|string results in an error\\.$#"
-			count: 7
-			path: src/Twig/MapsExtensions.php
-
-		-
-			message: "#^Parameter \\#1 \\$attributes of method Nucleos\\\\MapsBundle\\\\Twig\\\\MapsExtensions\\:\\:extractAttributes\\(\\) expects array\\<string, mixed\\>, array\\<string, mixed\\>\\|int\\|string given\\.$#"
-			count: 2
+			message: "#^Offset 'controller' on array\\{height\\: int, title\\: string, zoom\\: int, controller\\: string, attr\\: array\\<string, mixed\\>\\} on left side of \\?\\? always exists and is not nullable\\.$#"
+			count: 1
 			path: src/Twig/MapsExtensions.php
 
 		-
