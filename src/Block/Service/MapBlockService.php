@@ -89,7 +89,7 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
     public function configureEditForm(FormMapper $form, BlockInterface $block): void
     {
         $form->add('settings', ImmutableArrayType::class, [
-            'keys' => [
+            'keys'               => [
                 ['title', TextType::class, [
                     'required' => false,
                     'label'    => 'form.label_title',
@@ -99,9 +99,9 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
                     'label'    => 'form.label_marker_title',
                 ]],
                 ['service', ChoiceType::class, [
-                    'required' => true,
-                    'label'    => 'form.label_service',
-                    'choices'  => [
+                    'required'     => true,
+                    'label'        => 'form.label_service',
+                    'choices'      => [
                         'googlemaps'    => 'googlemaps',
                         'openstreetmap' => 'openstreetmap',
                     ],

@@ -26,12 +26,12 @@ use Twig\Environment;
 final class MapBlockServiceTest extends BlockServiceTestCase
 {
     /**
-     * @var MockObject&Environment
+     * @var Environment&MockObject
      */
     protected $twig;
 
     /**
-     * @var Provider&MockObject
+     * @var MockObject&Provider
      */
     private $provider;
 
