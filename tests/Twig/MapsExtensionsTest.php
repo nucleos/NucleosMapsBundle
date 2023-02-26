@@ -14,10 +14,7 @@ use PHPUnit\Framework\TestCase;
 
 final class MapsExtensionsTest extends TestCase
 {
-    /**
-     * @var MapsExtensions
-     */
-    private $extension;
+    private MapsExtensions $extension;
 
     protected function setUp(): void
     {

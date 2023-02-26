@@ -24,10 +24,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 final class MapBlockServiceTest extends BlockServiceTestCase
 {
-    /**
-     * @var MockObject&Provider
-     */
-    private $provider;
+    private MockObject&Provider $provider;
 
     protected function setUp(): void
     {

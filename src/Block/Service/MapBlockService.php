@@ -35,15 +35,9 @@ use Twig\Environment;
 
 final class MapBlockService extends AbstractBlockService implements EditableBlockService, LoggerAwareInterface
 {
-    /**
-     * @var LoggerInterface
-     */
-    private $logger;
+    private LoggerInterface $logger;
 
-    /**
-     * @var Provider
-     */
-    private $provider;
+    private Provider $provider;
 
     public function __construct(Environment $twig, Provider $provider)
     {

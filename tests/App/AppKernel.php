@@ -26,10 +26,7 @@ final class AppKernel extends Kernel
 {
     use MicroKernelTrait;
 
-    /**
-     * @var string
-     */
-    private $baseDir;
+    private string $baseDir;
 
     public function __construct()
     {
