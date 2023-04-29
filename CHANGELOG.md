@@ -2,27 +2,27 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 3.1.0 - TBD
+## 3.1.0 - 2023-04-29
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [3.1.0](https://github.com/nucleos/NucleosMapsBundle/milestone/10)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 3.1.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **4**
+- Total contributors: **2**
 
-### Removed
+#### dependency
 
-- Nothing.
-
-### Fixed
-
-- Nothing.
+ - [862: Drop support for symfony 6.1](https://github.com/nucleos/NucleosMapsBundle/pull/862) thanks to @core23
+ - [860: Update frontend dependencies](https://github.com/nucleos/NucleosMapsBundle/pull/860) thanks to @core23
+ - [859: Drop support for PHP 8.0](https://github.com/nucleos/NucleosMapsBundle/pull/859) thanks to @core23
+ - [858: Update dependency phpunit/phpunit to v10](https://github.com/nucleos/NucleosMapsBundle/pull/858) thanks to @renovate[bot]
 
 ## 2.3.0 - TBD
 
