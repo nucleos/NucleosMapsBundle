@@ -2,27 +2,28 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 3.2.0 - TBD
+## 3.2.0 - 2023-07-20
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [3.2.0](https://github.com/nucleos/NucleosMapsBundle/milestone/13)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 3.2.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **5**
+- Total contributors: **3**
 
-### Removed
+#### dependency
 
-- Nothing.
-
-### Fixed
-
-- Nothing.
+ - [869: Add support for latest sonata dependencies](https://github.com/nucleos/NucleosMapsBundle/pull/869) thanks to @core23
+ - [868: Bump word-wrap from 1.2.3 to 1.2.4 in /assets](https://github.com/nucleos/NucleosMapsBundle/pull/868) thanks to @dependabot[bot]
+ - [867: Bump semver from 5.7.1 to 5.7.2 in /assets](https://github.com/nucleos/NucleosMapsBundle/pull/867) thanks to @dependabot[bot]
+ - [866: Bump tough-cookie from 4.0.0 to 4.1.3 in /assets](https://github.com/nucleos/NucleosMapsBundle/pull/866) thanks to @dependabot[bot]
+ - [863: Update dependency prettier to v3](https://github.com/nucleos/NucleosMapsBundle/pull/863) thanks to @renovate[bot]
 
 ## 3.1.0 - 2023-04-29
 
