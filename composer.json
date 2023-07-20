@@ -47,7 +47,7 @@
         "geocoder-php/provider-implementation": "^1.0",
         "psr/log": "^1.0 || ^2.0 || ^3.0",
         "sonata-project/block-bundle": "^4.21 || ^5.0",
-        "sonata-project/form-extensions": "^0.1 || ^1.4",
+        "sonata-project/form-extensions": "^1.4 || ^2.0",
         "symfony/config": "^5.4 || ^6.2",
         "symfony/dependency-injection": "^5.4 || ^6.2",
         "symfony/expression-language": "^5.4 || ^6.2",
