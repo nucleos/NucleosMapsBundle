@@ -49,7 +49,7 @@
         "prettier": "^3.0.0",
         "sass": "^1.57.1",
         "sass-loader": "^13.2.0",
-        "size-limit": "^9.0.0"
+        "size-limit": "^10.0.0"
     },
     "scripts": {
         "build": "babel src -d dist && yarn sass:build",
