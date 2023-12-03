@@ -29,6 +29,6 @@ final class BundleIntegrationTest extends TestCase
         $client = new KernelBrowser(new AppKernel());
         $client->request('GET', '/test');
 
-        static::assertSame(200, $client->getResponse()->getStatusCode());
+        self::assertSame(200, $client->getResponse()->getStatusCode());
     }
 }

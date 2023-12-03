@@ -13,6 +13,4 @@ namespace Nucleos\MapsBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
-final class NucleosMapsBundle extends Bundle
-{
-}
+final class NucleosMapsBundle extends Bundle {}

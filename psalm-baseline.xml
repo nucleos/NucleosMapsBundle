@@ -1,29 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.13.1@086b94371304750d1c673315321a55d15fc59015">
+<files psalm-version="5.16.0@2897ba636551a8cb61601cc26f6ccfbba6c36591">
   <file src="src/Block/Service/MapBlockService.php">
     <MixedAssignment>
       <code>$latitude</code>
       <code>$longitude</code>
     </MixedAssignment>
-    <PossiblyNullArgument>
-      <code><![CDATA[$blockContext->getTemplate()]]></code>
-    </PossiblyNullArgument>
-    <UnusedClosureParam>
-      <code>$value</code>
-    </UnusedClosureParam>
   </file>
   <file src="src/DependencyInjection/Configuration.php">
     <PossiblyNullReference>
       <code>end</code>
     </PossiblyNullReference>
-    <PossiblyUndefinedMethod>
+    <UndefinedInterfaceMethod>
       <code>end</code>
-    </PossiblyUndefinedMethod>
-    <UnusedMethodCall>
-      <code>end</code>
-      <code>end</code>
-      <code>end</code>
-    </UnusedMethodCall>
+    </UndefinedInterfaceMethod>
   </file>
   <file src="src/DependencyInjection/NucleosMapsExtension.php">
     <MixedArgument>

@@ -19,6 +19,6 @@ final class NucleosMapsBundleTest extends TestCase
     {
         $bundle = new NucleosMapsBundle();
 
-        static::assertInstanceOf(NucleosMapsExtension::class, $bundle->getContainerExtension());
+        self::assertInstanceOf(NucleosMapsExtension::class, $bundle->getContainerExtension());
     }
 }

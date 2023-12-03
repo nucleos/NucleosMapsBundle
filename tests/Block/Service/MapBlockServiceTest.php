@@ -84,7 +84,7 @@ final class MapBlockServiceTest extends BlockServiceTestCase
 
         $response = new Response();
 
-        $this->twig->expects(static::once())->method('render')
+        $this->twig->expects(self::once())->method('render')
             ->with(
                 '@NucleosMaps/Block/block_map.html.twig',
                 [
@@ -99,7 +99,7 @@ final class MapBlockServiceTest extends BlockServiceTestCase
 
         $blockService = new MapBlockService($this->twig, $this->provider);
 
-        static::assertSame($response, $blockService->execute($blockContext, $response));
-        static::assertSame('TWIG_CONTENT', $response->getContent());
+        self::assertSame($response, $blockService->execute($blockContext, $response));
+        self::assertSame('TWIG_CONTENT', $response->getContent());
     }
 }

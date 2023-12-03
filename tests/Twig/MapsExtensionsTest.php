@@ -23,7 +23,7 @@ final class MapsExtensionsTest extends TestCase
 
     public function testRenderGoogleMap(): void
     {
-        static::assertSame(
+        self::assertSame(
             '<div
                     data-controller="nucleos--maps-bundle--googlemaps"
                     data-nucleos--maps-bundle--googlemaps-latitude-value="12"
@@ -39,7 +39,7 @@ final class MapsExtensionsTest extends TestCase
 
     public function testRenderGoogleMapWithOptapiKeyions(): void
     {
-        static::assertSame(
+        self::assertSame(
             '<div
                     data-controller="mycontroller nucleos--maps-bundle--googlemaps"
                     data-nucleos--maps-bundle--googlemaps-latitude-value="12"
@@ -68,7 +68,7 @@ final class MapsExtensionsTest extends TestCase
 
     public function testRenderOpenStreetMap(): void
     {
-        static::assertSame(
+        self::assertSame(
             '<div
                     data-controller="nucleos--maps-bundle--openstreetmap"
                     data-nucleos--maps-bundle--openstreetmap-latitude-value="12"
@@ -83,7 +83,7 @@ final class MapsExtensionsTest extends TestCase
 
     public function testRenderOpenStreetMapWithOptions(): void
     {
-        static::assertSame(
+        self::assertSame(
             '<div
                     data-controller="mycontroller nucleos--maps-bundle--openstreetmap"
                     data-nucleos--maps-bundle--openstreetmap-latitude-value="12"
