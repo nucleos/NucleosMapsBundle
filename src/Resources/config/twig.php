@@ -16,6 +16,5 @@ return static function (ContainerConfigurator $container): void {
 
         ->set(MapsExtensions::class)
             ->tag('twig.extension')
-
     ;
 };

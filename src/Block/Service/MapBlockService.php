@@ -151,9 +151,7 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
         ]);
     }
 
-    public function validate(ErrorElement $errorElement, BlockInterface $block): void
-    {
-    }
+    public function validate(ErrorElement $errorElement, BlockInterface $block): void {}
 
     public function getMetadata(): MetadataInterface
     {
