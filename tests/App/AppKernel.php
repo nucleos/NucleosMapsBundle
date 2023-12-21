@@ -26,12 +26,8 @@ final class AppKernel extends Kernel
 {
     use MicroKernelTrait;
 
-    private string $baseDir;
-
     public function __construct()
     {
-        $this->baseDir = sprintf('%s/%s/app-bundle/var/', sys_get_temp_dir(), uniqid('', true));
-
         parent::__construct('test', false);
     }
 
@@ -50,12 +46,12 @@ final class AppKernel extends Kernel
 
     public function getCacheDir(): string
     {
-        return $this->baseDir.'cache';
+        return $this->getBaseDir().'cache';
     }
 
     public function getLogDir(): string
     {
-        return $this->baseDir.'log';
+        return $this->getBaseDir().'log';
     }
 
     public function getProjectDir(): string
@@ -86,5 +82,10 @@ final class AppKernel extends Kernel
         }
 
         $loader->load(__DIR__.'/config/config.yaml');
+    }
+
+    private function getBaseDir(): string
+    {
+        return sys_get_temp_dir().'/app-bundle/var/';
     }
 }

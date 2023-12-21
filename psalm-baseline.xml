@@ -7,9 +7,6 @@
     </MixedAssignment>
   </file>
   <file src="src/DependencyInjection/Configuration.php">
-    <PossiblyNullReference>
-      <code>end</code>
-    </PossiblyNullReference>
     <UndefinedInterfaceMethod>
       <code>end</code>
     </UndefinedInterfaceMethod>
@@ -41,6 +38,7 @@
       <code>load</code>
     </MixedMethodCall>
     <PropertyNotSetInConstructor>
+      <code>AppKernel</code>
       <code>AppKernel</code>
     </PropertyNotSetInConstructor>
   </file>
