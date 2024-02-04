@@ -2,27 +2,35 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 3.3.0 - TBD
+## 3.3.0 - 2024-02-04
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [3.3.0](https://github.com/nucleos/NucleosMapsBundle/milestone/15)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 3.3.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **6**
+- Total contributors: **3**
 
-### Removed
+#### dependency
 
-- Nothing.
+ - [895: Bump to symfony ^6.4 || ^7.0](https://github.com/nucleos/NucleosMapsBundle/pull/895) thanks to @core23
+ - [894: Bump to symfony ^6.4 || ^7.0](https://github.com/nucleos/NucleosMapsBundle/pull/894) thanks to @core23
+ - [890: Update dependency symfony/phpunit-bridge to v7](https://github.com/nucleos/NucleosMapsBundle/pull/890) thanks to @renovate[bot]
+ - [889: Update dependency matthiasnoback/symfony-dependency-injection-test to v5](https://github.com/nucleos/NucleosMapsBundle/pull/889) thanks to @renovate[bot]
 
-### Fixed
+#### Enhancement
 
-- Nothing.
+ - [891: Update tools ](https://github.com/nucleos/NucleosMapsBundle/pull/891) thanks to @core23
+
+#### dependency,javascript
+
+ - [879: Bump @babel/traverse from 7.18.2 to 7.23.2 in /assets](https://github.com/nucleos/NucleosMapsBundle/pull/879) thanks to @dependabot[bot]
 
 ## 3.2.0 - 2023-07-20
 
