@@ -42,7 +42,7 @@
         "@size-limit/esbuild": "^9.0.0",
         "@size-limit/preset-small-lib": "^9.0.0",
         "@symfony/stimulus-testing": "^2.0.1",
-        "eslint": "^8.32.0",
+        "eslint": "^9.0.0",
         "eslint-config-prettier": "^9.0.0",
         "eslint-plugin-import": "^2.27.5",
         "eslint-plugin-jest": "^28.0.0",
