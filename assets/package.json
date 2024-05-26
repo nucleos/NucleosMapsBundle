@@ -39,8 +39,8 @@
         "@babel/plugin-transform-runtime": "^7.18.2",
         "@babel/preset-env": "^7.18.2",
         "@hotwired/stimulus": "^3.0.1",
-        "@size-limit/esbuild": "^9.0.0",
-        "@size-limit/preset-small-lib": "^9.0.0",
+        "@size-limit/esbuild": "^11.1.4",
+        "@size-limit/preset-small-lib": "^11.1.4",
         "@symfony/stimulus-testing": "^2.0.1",
         "eslint": "^8.32.0",
         "eslint-config-prettier": "^9.0.0",
@@ -49,7 +49,7 @@
         "prettier": "^3.0.0",
         "sass": "^1.57.1",
         "sass-loader": "^14.0.0",
-        "size-limit": "^9.0.0"
+        "size-limit": "^11.1.4"
     },
     "scripts": {
         "build": "babel src -d dist && yarn sass:build",

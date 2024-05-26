@@ -9,23 +9,22 @@ var _regenerator = _interopRequireDefault(require("@babel/runtime/regenerator"))
 var _asyncToGenerator2 = _interopRequireDefault(require("@babel/runtime/helpers/asyncToGenerator"));
 var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
 var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
 var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
 var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/defineProperty"));
 var _stimulus = require("@hotwired/stimulus");
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2["default"])(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2["default"])(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2["default"])(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2["default"])(this, result); }; }
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-var _default = /*#__PURE__*/function (_Controller) {
-  (0, _inherits2["default"])(_default, _Controller);
-  var _super = _createSuper(_default);
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { (0, _defineProperty2["default"])(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _callSuper(t, o, e) { return o = (0, _getPrototypeOf2["default"])(o), (0, _possibleConstructorReturn2["default"])(t, _isNativeReflectConstruct() ? Reflect.construct(o, e || [], (0, _getPrototypeOf2["default"])(t).constructor) : o.apply(t, e)); }
+function _isNativeReflectConstruct() { try { var t = !Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); } catch (t) {} return (_isNativeReflectConstruct = function _isNativeReflectConstruct() { return !!t; })(); }
+var _default = exports["default"] = /*#__PURE__*/function (_Controller) {
   function _default() {
     (0, _classCallCheck2["default"])(this, _default);
-    return _super.apply(this, arguments);
+    return _callSuper(this, _default, arguments);
   }
-  (0, _createClass2["default"])(_default, [{
+  (0, _inherits2["default"])(_default, _Controller);
+  return (0, _createClass2["default"])(_default, [{
     key: "connect",
     value: function connect() {
       var _this = this;
@@ -80,35 +79,33 @@ var _default = /*#__PURE__*/function (_Controller) {
       var _prepareApi2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(apiKey) {
         var get, myPromises;
         return _regenerator["default"].wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                get = function _get(src) {
-                  return new Promise(function (resolve, reject) {
-                    var el = document.createElement('script');
-                    el.async = true;
-                    el.addEventListener('error', function () {
-                      reject(src);
-                    }, false);
-                    el.src = src;
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(el);
-                    window.googleMapsInitialized = function () {
-                      resolve(src);
-                    };
-                  });
-                };
-                _context.next = 3;
-                return get('https://maps.googleapis.com/maps/api/js?key=' + apiKey + '&callback=googleMapsInitialized');
-              case 3:
-                myPromises = _context.sent;
-                _context.next = 6;
-                return Promise.all(myPromises);
-              case 6:
-                return _context.abrupt("return", _context.sent);
-              case 7:
-              case "end":
-                return _context.stop();
-            }
+          while (1) switch (_context.prev = _context.next) {
+            case 0:
+              get = function _get(src) {
+                return new Promise(function (resolve, reject) {
+                  var el = document.createElement('script');
+                  el.async = true;
+                  el.addEventListener('error', function () {
+                    reject(src);
+                  }, false);
+                  el.src = src;
+                  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(el);
+                  window.googleMapsInitialized = function () {
+                    resolve(src);
+                  };
+                });
+              };
+              _context.next = 3;
+              return get('https://maps.googleapis.com/maps/api/js?key=' + apiKey + '&callback=googleMapsInitialized');
+            case 3:
+              myPromises = _context.sent;
+              _context.next = 6;
+              return Promise.all(myPromises);
+            case 6:
+              return _context.abrupt("return", _context.sent);
+            case 7:
+            case "end":
+              return _context.stop();
           }
         }, _callee);
       }));
@@ -136,9 +133,7 @@ var _default = /*#__PURE__*/function (_Controller) {
       this.element.dispatchEvent(userEvent);
     }
   }]);
-  return _default;
 }(_stimulus.Controller);
-exports["default"] = _default;
 (0, _defineProperty2["default"])(_default, "values", {
   latitude: Number,
   longitude: Number,
