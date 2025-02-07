@@ -205,7 +205,7 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
 
             return [$coordinates->getLatitude(), $coordinates->getLongitude()];
         } catch (Exception $e) {
-            $this->logger->warning(sprintf('Error fetch geo information for %s', $address), [
+            $this->logger->warning(\sprintf('Error fetch geo information for %s', $address), [
                 'exception' => $e,
             ]);
         }
