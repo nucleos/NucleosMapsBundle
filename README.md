@@ -10,7 +10,6 @@ NucleosMapsBundle
 
 [![Continuous Integration](https://github.com/nucleos/NucleosMapsBundle/actions/workflows/continuous-integration.yml/badge.svg?event=push)](https://github.com/nucleos/NucleosMapsBundle/actions?query=workflow%3A"Continuous+Integration"+event%3Apush)
 [![Code Coverage](https://codecov.io/gh/nucleos/NucleosMapsBundle/graph/badge.svg)](https://codecov.io/gh/nucleos/NucleosMapsBundle)
-[![Type Coverage](https://shepherd.dev/github/nucleos/NucleosMapsBundle/coverage.svg)](https://shepherd.dev/github/nucleos/NucleosMapsBundle)
 
 This bundle provides simple map rendering in symfony application.
 
