@@ -81,7 +81,7 @@ final class MapsExtensions extends AbstractExtension
     /**
      * @param array<string, mixed> $attributes
      *
-     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @SuppressWarnings("PHPMD.CyclomaticComplexity")
      */
     private function extractAttributes(array $attributes = []): string
     {

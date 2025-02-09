@@ -76,7 +76,7 @@ final class MapBlockService extends AbstractBlockService implements EditableBloc
     }
 
     /**
-     * @SuppressWarnings(PHPMD.ExcessiveMethodLength)
+     * @SuppressWarnings("PHPMD.ExcessiveMethodLength")
      */
     public function configureEditForm(FormMapper $form, BlockInterface $block): void
     {
