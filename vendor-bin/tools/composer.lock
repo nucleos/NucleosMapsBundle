@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7048d8682a02f10e354b76ed58fb4cec",
+    "content-hash": "3bbbf2a17759271a67156f9144435311",
     "packages": [],
     "packages-dev": [
         {
@@ -649,30 +649,26 @@
         },
         {
             "name": "matthiasnoback/symfony-dependency-injection-test",
-            "version": "5.1.0",
+            "version": "6.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SymfonyTest/SymfonyDependencyInjectionTest.git",
-                "reference": "2bd8962a26c05bdaeae2a29c981de57d1f150140"
+                "reference": "a8fc681e04fac57e4f71b3fffb0ed5ccbb448d48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SymfonyTest/SymfonyDependencyInjectionTest/zipball/2bd8962a26c05bdaeae2a29c981de57d1f150140",
-                "reference": "2bd8962a26c05bdaeae2a29c981de57d1f150140",
+                "url": "https://api.github.com/repos/SymfonyTest/SymfonyDependencyInjectionTest/zipball/a8fc681e04fac57e4f71b3fffb0ed5ccbb448d48",
+                "reference": "a8fc681e04fac57e4f71b3fffb0ed5ccbb448d48",
                 "shasum": ""
             },
             "require": {
-                "matthiasnoback/symfony-config-test": "^5.0",
+                "matthiasnoback/symfony-config-test": "^5.0 || ^6.0",
                 "php": "^8.1",
+                "phpunit/phpunit": "^10.5.11 || ^11.0 || ^12.0",
+                "sebastian/exporter": " ^5.0 || ^6.0 || ^7.0",
                 "symfony/config": "^5.4 || ^6.2 || ^7.0",
                 "symfony/dependency-injection": "^5.4 || ^6.2 || ^7.0",
                 "symfony/yaml": "^5.4 || ^6.2 || ^7.0"
-            },
-            "conflict": {
-                "phpunit/phpunit": "<9.6 || >=11.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^9.6 || ^10.0"
             },
             "type": "library",
             "extra": {
@@ -709,9 +705,9 @@
             ],
             "support": {
                 "issues": "https://github.com/SymfonyTest/SymfonyDependencyInjectionTest/issues",
-                "source": "https://github.com/SymfonyTest/SymfonyDependencyInjectionTest/tree/5.1.0"
+                "source": "https://github.com/SymfonyTest/SymfonyDependencyInjectionTest/tree/6.1.0"
             },
-            "time": "2023-12-13T19:23:54+00:00"
+            "time": "2025-03-08T18:08:49+00:00"
         },
         {
             "name": "myclabs/deep-copy",
