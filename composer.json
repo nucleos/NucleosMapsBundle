@@ -59,7 +59,7 @@
         "symfony/options-resolver": "^6.4 || ^7.0",
         "symfony/twig-bridge": "^6.4 || ^7.0",
         "twig/twig": "^2.4 || ^3.0",
-        "willdurand/geocoder": "^4.2",
+        "willdurand/geocoder": "^5.0",
         "willdurand/geocoder-bundle": "^5.11"
     },
     "require-dev": {
