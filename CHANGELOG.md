@@ -2,27 +2,38 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 3.5.0 - TBD
+## 3.5.0 - 2025-10-20
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [3.5.0](https://github.com/nucleos/NucleosMapsBundle/milestone/19)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 3.5.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **12**
+- Total contributors: **3**
 
-### Removed
+#### dependency
 
-- Nothing.
+ - [939: Add conflict for abandoned project to fix build](https://github.com/nucleos/NucleosMapsBundle/pull/939) thanks to @core23
+ - [937: Update dependency globals to v16](https://github.com/nucleos/NucleosMapsBundle/pull/937) thanks to @renovate[bot]
+ - [936: Update to phpunit v12](https://github.com/nucleos/NucleosMapsBundle/pull/936) thanks to @core23
+ - [935: Drop support for PHP 8.2](https://github.com/nucleos/NucleosMapsBundle/pull/935) thanks to @core23
+ - [932: Bump form-data from 3.0.1 to 3.0.4 in /assets](https://github.com/nucleos/NucleosMapsBundle/pull/932) thanks to @dependabot[bot]
+ - [931: Update dependency eslint-plugin-jest to v29](https://github.com/nucleos/NucleosMapsBundle/pull/931) thanks to @renovate[bot]
+ - [921: Update dependency willdurand/geocoder to v5 - autoclosed](https://github.com/nucleos/NucleosMapsBundle/pull/921) thanks to @renovate[bot]
+ - [919: Update PHPStan packages to v2 (major)](https://github.com/nucleos/NucleosMapsBundle/pull/919) thanks to @renovate[bot]
 
-### Fixed
+#### Enhancement
 
-- Nothing.
+ - [930: Remove ci pipeline overrides ](https://github.com/nucleos/NucleosMapsBundle/pull/930) thanks to @core23
+ - [929: Sync tool config ](https://github.com/nucleos/NucleosMapsBundle/pull/929) thanks to @core23
+ - [928: Remove infection testing ](https://github.com/nucleos/NucleosMapsBundle/pull/928) thanks to @core23
+ - [926: Remove psalm in favor of phpstan ](https://github.com/nucleos/NucleosMapsBundle/pull/926) thanks to @core23
 
 ## 3.4.0 - 2024-08-14
 
