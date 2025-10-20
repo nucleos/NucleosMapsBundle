@@ -73,6 +73,9 @@
         "symfony/console": "^6.4 || ^7.0",
         "symfony/yaml": "^6.4 || ^7.0"
     },
+    "conflict": {
+        "php-http/message-factory": "*"
+    },
     "suggest": {
         "geocoder-php/bing-maps-provider": "For bing geocoder",
         "geocoder-php/google-maps-provider": "For Google Maps geocoder",
