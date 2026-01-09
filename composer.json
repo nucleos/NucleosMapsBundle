@@ -60,7 +60,7 @@
         "symfony/twig-bridge": "^6.4 || ^7.0",
         "twig/twig": "^2.4 || ^3.0",
         "willdurand/geocoder": "^5.0",
-        "willdurand/geocoder-bundle": "^5.11"
+        "willdurand/geocoder-bundle": "^6.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.0.1",
