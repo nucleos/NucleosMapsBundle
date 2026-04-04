@@ -53,7 +53,7 @@
         "symfony/expression-language": "^7.4 || ^8.0",
         "symfony/form": "^7.4 || ^8.0",
         "symfony/framework-bundle": "^7.4 || ^8.0",
-        "symfony/http-client": "^7.2",
+        "symfony/http-client": "^8.0",
         "symfony/http-foundation": "^7.4 || ^8.0",
         "symfony/http-kernel": "^7.4 || ^8.0",
         "symfony/options-resolver": "^7.4 || ^8.0",
