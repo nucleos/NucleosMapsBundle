@@ -7,6 +7,5 @@ phpunit.xml
 /assets/node_modules/
 /build/
 /vendor/
-!/vendor-bin/tools/composer.lock
 /vendor-bin/tools/vendor/
 /vendor-bin/tools/bin/
