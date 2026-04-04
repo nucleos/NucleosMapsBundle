@@ -40,7 +40,7 @@
         "@babel/preset-env": "^7.18.2",
         "@eslint/compat": "^2.0.0",
         "@hotwired/stimulus": "^3.0.1",
-        "@size-limit/esbuild": "^11.1.4",
+        "@size-limit/esbuild": "^12.0.0",
         "@size-limit/preset-small-lib": "^11.1.4",
         "@symfony/stimulus-testing": "^2.0.1",
         "eslint": "^9.0.0",
