@@ -76,9 +76,9 @@ var _default = exports["default"] = /*#__PURE__*/function (_Controller) {
   }, {
     key: "_prepareApi",
     value: function () {
-      var _prepareApi2 = (0, _asyncToGenerator2["default"])( /*#__PURE__*/_regenerator["default"].mark(function _callee(apiKey) {
+      var _prepareApi2 = (0, _asyncToGenerator2["default"])(/*#__PURE__*/_regenerator["default"].mark(function _callee(apiKey) {
         var get, myPromises;
-        return _regenerator["default"].wrap(function _callee$(_context) {
+        return _regenerator["default"].wrap(function (_context) {
           while (1) switch (_context.prev = _context.next) {
             case 0:
               get = function _get(src) {
@@ -95,15 +95,15 @@ var _default = exports["default"] = /*#__PURE__*/function (_Controller) {
                   };
                 });
               };
-              _context.next = 3;
+              _context.next = 1;
               return get('https://maps.googleapis.com/maps/api/js?key=' + apiKey + '&callback=googleMapsInitialized');
-            case 3:
+            case 1:
               myPromises = _context.sent;
-              _context.next = 6;
+              _context.next = 2;
               return Promise.all(myPromises);
-            case 6:
+            case 2:
               return _context.abrupt("return", _context.sent);
-            case 7:
+            case 3:
             case "end":
               return _context.stop();
           }
