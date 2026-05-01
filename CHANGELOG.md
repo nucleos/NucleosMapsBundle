@@ -2,27 +2,24 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 3.7.0 - TBD
+## 3.7.0 - 2026-05-01
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [3.7.0](https://github.com/nucleos/NucleosMapsBundle/milestone/23)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 3.7.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **1**
+- Total contributors: **1**
 
-### Removed
+#### dependency
 
-- Nothing.
-
-### Fixed
-
-- Nothing.
+ - [963: Add support for willdurand/geocoder-bundle 7](https://github.com/nucleos/NucleosMapsBundle/pull/963) thanks to @core23
 
 ## 3.6.0 - 2026-05-01
 
