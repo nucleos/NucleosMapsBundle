@@ -23,21 +23,24 @@ const compat = new FlatCompat({
     allConfig: js.configs.all
 });
 
-module.exports = defineConfig([{
-    languageOptions: {
-        parser: babelParser,
+module.exports = defineConfig([
+    {
+        languageOptions: {
+            parser: babelParser,
 
-        globals: {
-            ...globals.browser,
+            globals: {
+                ...globals.browser,
+            },
+        },
+
+        extends: fixupConfigRules(compat.extends('eslint:recommended', 'plugin:import/warnings', 'prettier')),
+
+        plugins: {
+            import: fixupPluginRules(_import),
         },
     },
-
-    extends: fixupConfigRules(compat.extends("eslint:recommended", "plugin:import/warnings", "prettier")),
-
-    plugins: {
-        import: fixupPluginRules(_import),
+    {
+        files: ['test/*.js'],
+        extends: compat.extends('plugin:jest/recommended'),
     },
-}, {
-    files: ["test/*.js"],
-    extends: compat.extends("plugin:jest/recommended"),
-}]);
+]);
