@@ -4489,10 +4489,10 @@ kleur@^3.0.3:
   resolved "https://registry.yarnpkg.com/kleur/-/kleur-3.0.3.tgz#a79c9ecc86ee1ce3fa6206d1216c501f147fc07e"
   integrity sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==
 
-leaflet-extra-markers@^1.1.0:
-  version "1.2.2"
-  resolved "https://registry.yarnpkg.com/leaflet-extra-markers/-/leaflet-extra-markers-1.2.2.tgz#e0887ef282fcab53aaf7a5bb6d617ded54aee1d9"
-  integrity sha512-LQUicXhyOwq0wOFtEftJg9IzAGcQI+6mHgh3wsVntrid149BTqsEgh1UcxPPtzcL7xt8jXY0rssfz7DUZuQudg==
+leaflet-extra-markers@^2.0.0:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/leaflet-extra-markers/-/leaflet-extra-markers-2.0.1.tgz#ffd2a2882c3c3ae45ed96b39ea2c27ce34f08621"
+  integrity sha512-cbCo+YSgnN+tomDJRxv/vf+ZXfLymSKjDDuv7omYaOO+8oj9q9uvwytL+eViyClPuscAT3lNh339R+gr8w20qg==
 
 leaflet@^1.7.1:
   version "1.9.4"
