@@ -2,27 +2,32 @@
 
 All notable changes to this project will be documented in this file, in reverse chronological order by release.
 
-## 3.6.0 - TBD
+## 3.6.0 - 2026-05-01
 
-### Added
 
-- Nothing.
+-----
 
-### Changed
+### Release Notes for [3.6.0](https://github.com/nucleos/NucleosMapsBundle/milestone/21)
 
-- Nothing.
+Feature release (minor)
 
-### Deprecated
+### 3.6.0
 
-- Nothing.
+- Total issues resolved: **0**
+- Total pull requests resolved: **8**
+- Total contributors: **2**
 
-### Removed
+#### dependency
 
-- Nothing.
+ - [961: Use phpunit 13 where possible](https://github.com/nucleos/NucleosMapsBundle/pull/961) thanks to @core23
+ - [960: Add support for symfony 8](https://github.com/nucleos/NucleosMapsBundle/pull/960) thanks to @core23
+ - [959: Use phpunit 13 where possible](https://github.com/nucleos/NucleosMapsBundle/pull/959) thanks to @core23
+ - [958: Add support for symfony 8](https://github.com/nucleos/NucleosMapsBundle/pull/958) thanks to @core23
+ - [947: Update dependency globals to v17](https://github.com/nucleos/NucleosMapsBundle/pull/947) thanks to @renovate[bot]
+ - [944: Update dependency size-limit to v12](https://github.com/nucleos/NucleosMapsBundle/pull/944) thanks to @renovate[bot]
 
-### Fixed
-
-- Nothing.
+ - [942: Update dependency @size-limit/esbuild to v12](https://github.com/nucleos/NucleosMapsBundle/pull/942) thanks to @renovate[bot]
+ - [940: Update dependency @eslint/compat to v2](https://github.com/nucleos/NucleosMapsBundle/pull/940) thanks to @renovate[bot]
 
 ## 3.5.0 - 2025-10-20
 
